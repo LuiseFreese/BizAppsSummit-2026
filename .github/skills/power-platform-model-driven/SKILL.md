@@ -270,4 +270,84 @@ For lookup/dropdown values (categories, types, etc.):
 
 ---
 
+## Workshop Delivery Best Practices
+
+### Screenshot Documentation Patterns
+
+**Naming Convention Standard:**
+- Format: `01-<part>-<step>-<descriptive-title>`
+- Examples: `01-2-4-trip-purpose-values`, `01-3-6-lookup-configuration`
+- Use kebab-case (lowercase with hyphens)
+- Keep titles descriptive but concise
+
+**Screenshot Workflow Management:**
+1. **Maintenance Document**: Central source of truth for all screenshot specifications
+2. **Progressive Capture**: Take screenshots in exercise sequence order
+3. **Consistency Requirements**: Same browser size, clean demo environment, realistic data
+4. **Content Guidelines**: Use participant initials, blur personal information
+
+**Image Reference Management:**
+- Single source of truth: screenshot maintenance document
+- Remove exercise references when screenshots are deleted
+- Regular audit for broken or outdated image links
+- Consistent path structure: `images/[filename].png`
+
+### BizAppsSummit Workshop Structure
+
+**Time Management:**
+- 9:00-16:30 full-day format with structured breaks
+- Lecture/Lab/Demo rotation for engagement
+- Buffer time for Q&A and troubleshooting
+- Hands-on exercises with progressive complexity
+
+**Participant Requirements:**
+- Laptop with power charger (essential)
+- Optional: Second screen, external mouse for productivity
+- Power Platform environment access
+- Basic understanding of business applications
+
+**Exercise Progression:**
+1. **Foundation**: Solution/Publisher setup (ALM fundamentals)
+2. **Data Modeling**: Tables, relationships, choice sets
+3. **User Experience**: Forms, views, navigation
+4. **Integration**: Model-driven app assembly
+5. **Testing**: CRUD operations and relationship validation
+6. **Extension**: Challenge exercises for advanced participants
+
+### Advanced Form Layout Patterns
+
+**Header Section Strategy:**
+- Primary identifier field (Trip Name, Project Title)
+- Key status indicator (business workflow status)
+- Maximum 2-3 fields to avoid clutter
+- Strategic placement for quick recognition
+
+**General Section Organization:**
+```
+Left Column:           Right Column:
+- Primary fields       - Secondary fields
+- Required data        - Optional data
+- User input fields    - Calculated/lookup fields
+```
+
+**Section Hierarchy Best Practices:**
+1. **Header**: Critical identification and status
+2. **General**: Core business data (two-column layout)
+3. **Details**: Additional information (full-width text areas)
+4. **Related Records**: Subgrids at bottom for child data
+
+**Subgrid Implementation:**
+- Position: Always at form bottom
+- Purpose: Show 1:N relationship data inline
+- Enable: Quick creation of related records
+- Configuration: Relevant columns only, sorted by recency
+
+**Form Layout Principles:**
+- **Progressive Disclosure**: Most important fields first
+- **Visual Grouping**: Related fields in same sections
+- **Logical Flow**: Match business process sequence
+- **Responsive Design**: Test on multiple screen sizes
+
+---
+
 This skill encapsulates enterprise-grade Power Platform development patterns focused on maintainable, scalable, and user-friendly model-driven applications.
