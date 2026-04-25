@@ -240,7 +240,13 @@ Your table should now look like this:
 
 1. Go back to **Tables** and select your **Trip** table
 2. Select **Forms** tab
+
+![Table Forms Tab](images/01-3-6-table-forms-tab.png)
+
 3. Find the **Information** form (Main form type) and select to edit it
+
+![Form Designer](images/01-3-6-form-designer.png)
+
 4. Customize the form layout:
    - **Header section**: Add `Trip Name` and `Trip Status`
    - **General section**: Organize fields in two columns:
