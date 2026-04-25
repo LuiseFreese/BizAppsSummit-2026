@@ -284,7 +284,7 @@ Your table should now look like this:
 
 8. Select **Save and publish**
 
-### Step 8: Customize the Trip Main View
+### Step 7: Customize the Trip Main View
 
 1. Still in the Trip table, select **Views** tab
 2. Find the **Active Trips** view and select to edit it
@@ -299,7 +299,7 @@ Your table should now look like this:
 4. Set **Sort by**: `Start Date` (Descending) so newest trips appear first
 5. Select **Save and publish**
 
-### Step 9: Customize the Expense Main Form
+### Step 8: Customize the Expense Main Form
 
 1. Navigate to your **Expense** table
 2. Select **Forms** tab → edit the **Information** form
@@ -312,7 +312,7 @@ Your table should now look like this:
 
 4. Select **Save and publish**
 
-### Step 10: Customize the Expense Main View  
+### Step 9: Customize the Expense Main View  
 
 1. In Expense table, select **Views** tab
 2. Edit the **Active Expenses** view
@@ -331,7 +331,7 @@ Your table should now look like this:
 
 ## Part 4: Create the Model-Driven App
 
-### Step 11: Build the App
+### Step 10: Build the App
 
 1. From within your **Expense Tracker App solution**, select **+ New** → **App** → **Model-driven app**
 2. In the app designer:
@@ -360,7 +360,7 @@ Your table should now look like this:
 > [!TIP]
 > **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
 
-### Step 12: Test Your App
+### Step 11: Test Your App
 
 1. Select **Play** to launch your app
 2. **Test the built-in CRUD operations**:
