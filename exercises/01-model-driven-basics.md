@@ -10,6 +10,7 @@ We're building an expense tracking system where:
 - Users can easily manage all their travel expenses in one organized system
 
 ## Learning Objectives
+- Create a solution and publisher for proper application lifecycle management
 - Create and configure Dataverse tables
 - Establish table relationships using lookups
 - Customize main forms and views
@@ -18,16 +19,59 @@ We're building an expense tracking system where:
 
 ---
 
-## Part 1: Create the Tables
+## Part 1: Create Solution and Publisher
 
-### Step 1: Create the Trip Table
+### Step 1: Create a Publisher
 
 1. Navigate to **Power Apps** ([make.powerapps.com](https://make.powerapps.com))
 2. Select your environment
-3. Click **Tables** in the left navigation
-4. Click **+ New table** → **Add columns and data**
-5. Name your table: `Trip`
-6. Add the following columns:
+3. Click **Solutions** in the left navigation
+4. Click **+ New solution**
+5. Before we create the solution, we need a publisher. Click **+ New publisher**
+6. Fill in the publisher details using **your initials**:
+   - **Display name**: `[Your Initials] BizApps Summit` (e.g., "LF BizApps Summit")
+   - **Name**: `[yourinitials]bizappssummit` (e.g., "lfbizappssummit" - this will auto-populate)
+   - **Prefix**: `[your initials]` (e.g., "lf" - keep it short, 2-4 characters)
+   - **Option value prefix**: `10000` (leave default or use provided number)
+   - **Contact details**: Add your email
+7. Click **Save**
+
+> 💡 **Why use your initials?** This ensures each participant has a unique publisher prefix, avoiding conflicts when working in shared environments.
+
+### Step 2: Create the Solution
+
+1. Now back in the **New solution** dialog:
+   - **Display name**: `Expense Tracker App`
+   - **Name**: `ExpenseTrackerApp` (auto-populated)
+   - **Publisher**: Select **[Your Initials] BizApps Summit** (the publisher you just created)
+   - **Version**: `1.0.0.0` (default)
+   - **Description**: `Complete expense tracking solution for business trips`
+2. Click **Create**
+
+### Step 3: Work Within Your Solution
+
+From now on, **all components will be created within this solution**. This ensures:
+- ✅ Proper component organization
+- ✅ Easy deployment between environments  
+- ✅ Clean application lifecycle management
+- ✅ Simplified backup and version control
+
+---
+
+## Part 2: Create the Tables
+
+## Part 2: Create the Tables
+
+### Step 4: Create the Trip Table
+
+1. You should now be **inside your Expense Tracker App solution**
+2. Click **+ New** → **Table** → **Table**
+3. In the **New table** panel:
+   - **Display name**: `Trip`
+   - **Plural display name**: `Trips` (auto-populated)
+   - **Name**: `[prefix]_Trip` (e.g., `lf_Trip` - note your initials prefix)
+4. Click **Save**
+5. You're now in the table designer. Add the following columns by clicking **+ New column**:
 
 | Column Name | Data Type | Required | Description |
 |-------------|-----------|----------|-------------|
@@ -52,13 +96,17 @@ We're building an expense tracking system where:
    - Completed
    - Cancelled
 
-9. Click **Save and exit**
+9. Click **Save** (this saves the table to your solution)
 
-### Step 2: Create the Expense Report Table
+### Step 5: Create the Expense Report Table
 
-1. Click **+ New table** → **Add columns and data**
-2. Name your table: `Expense Report`
-3. Add the following columns:
+1. From your solution, click **+ New** → **Table** → **Table**
+2. In the **New table** panel:
+   - **Display name**: `Expense Report`
+   - **Plural display name**: `Expense Reports` (auto-populated) 
+   - **Name**: `[prefix]_ExpenseReport` (e.g., `lf_ExpenseReport` - note your prefix)
+3. Click **Save**
+4. Add the following columns by clicking **+ New column**:
 
 | Column Name | Data Type | Required | Description |
 |-------------|-----------|----------|-------------|
@@ -88,9 +136,9 @@ We're building an expense tracking system where:
 
 ---
 
-## Part 2: Create the Relationship
+## Part 3: Create the Relationship
 
-### Step 3: Add the Trip Lookup to Expense Report
+### Step 6: Add the Trip Lookup to Expense Report
 
 1. While still in the Expense Report table editor, find the **Trip** column
 2. Click on the **Trip** column to configure it
@@ -109,9 +157,9 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ---
 
-## Part 3: Customize Forms and Views
+## Part 4: Customize Forms and Views
 
-### Step 4: Customize the Trip Main Form
+### Step 7: Customize the Trip Main Form
 
 1. Go back to **Tables** and select your **Trip** table
 2. Click **Forms** tab
@@ -130,7 +178,7 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 6. Click **Save and publish**
 
-### Step 5: Customize the Trip Main View
+### Step 8: Customize the Trip Main View
 
 1. Still in the Trip table, click **Views** tab
 2. Find the **Active Trips** view and click to edit it
@@ -145,7 +193,7 @@ You've just created a **1:N (one-to-many)** relationship where:
 4. Set **Sort by**: Start Date (Descending) so newest trips appear first
 5. Click **Save and publish**
 
-### Step 6: Customize the Expense Report Main Form
+### Step 9: Customize the Expense Report Main Form
 
 1. Navigate to your **Expense Report** table
 2. Click **Forms** tab → edit the **Information** form
@@ -158,7 +206,7 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 4. Click **Save and publish**
 
-### Step 7: Customize the Expense Report Main View  
+### Step 10: Customize the Expense Report Main View  
 
 1. In Expense Report table, click **Views** tab
 2. Edit the **Active Expense Reports** view
@@ -175,34 +223,37 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ---
 
-## Part 4: Create the Model-Driven App
+## Part 5: Create the Model-Driven App
 
-### Step 8: Build the App
+### Step 11: Build the App
 
-1. From the Power Apps home page, click **+ Create**
-2. Select **Blank app** → **Model-driven app**
-3. Give your app a name: `Expense Tracker`
-4. Click **Create**
+1. From within your **Expense Tracker App solution**, click **+ New** → **App** → **Model-driven app**
+2. In the app designer:
+   - **Name**: `Expense Tracker`
+   - **Description**: `Track business trip expenses and manage approvals`
+3. Click **Create**
 
-5. In the app designer:
+4. In the modern app designer:
    - Click **+ Add page** → **Table based view and form**
-   - Select **Trip** table
+   - Select **Trip** table (it will show with your prefix, e.g., `lf_Trip`)
    - This automatically adds both the view and form pages for trips
    - Click **Add**
 
-6. Repeat for Expense Reports:
+5. Repeat for Expense Reports:
    - Click **+ Add page** → **Table based view and form** 
-   - Select **Expense Report** table
+   - Select **Expense Report** table (it will show with your prefix, e.g., `lf_ExpenseReport`)
    - Click **Add**
 
-7. **Organize Navigation**:
+6. **Organize Navigation**:
    - In the navigation area, arrange items:
      - Trips (first)
      - Expense Reports (second)
 
-8. Click **Save** then **Publish**
+7. Click **Save** then **Publish**
 
-### Step 9: Test Your App
+> 💡 **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
+
+### Step 12: Test Your App
 
 1. Click **Play** to launch your app
 2. **Test the built-in CRUD operations**:
@@ -234,7 +285,7 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ---
 
-## Part 5: Understanding What You Built
+## Part 6: Understanding What You Built
 
 ### Built-in Features You Get "For Free"
 
