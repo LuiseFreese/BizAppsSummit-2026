@@ -27,13 +27,10 @@ We're building an expense tracking system where:
 2. Select your environment
 3. Click **Solutions** in the left navigation
 
-![Solutions Page](../assets/01-1-1-solutions-page.png)
+![Solutions Page](exercises/images/01-1-1-solutions-page.png)
 
 4. Click **+ New solution**
 5. Before we create the solution, we need a publisher. Click **+ New publisher**
-
-![New Publisher Dialog](../assets/01-1-1-new-publisher-dialog.png)
-
 6. Fill in the publisher details using **your initials**:
    - **Display name**: `[Your Initials]` (e.g., "LF")
    - **Name**: `[yourinitials]` (e.g., "lf" - this will auto-populate)
@@ -41,11 +38,9 @@ We're building an expense tracking system where:
    - **Option value prefix**: `10000` (leave default or use provided number)
    - **Contact details**: Add your email
 
-![Publisher Form Filled](../assets/01-1-1-publisher-form-filled.png)
+![Publisher Form Filled](exercises/images/01-1-1-publisher-form-filled.png)
 
 7. Click **Save**
-
-![Publisher Created](../assets/01-1-1-publisher-created.png)
 
 > 💡 **Why use your initials?** This ensures each participant has a unique publisher prefix, avoiding conflicts when working in shared environments.
 
@@ -58,11 +53,9 @@ We're building an expense tracking system where:
    - **Version**: `1.0.0.0` (default)
    - **Description**: `Complete expense tracking solution for business trips`
 
-![New Solution Dialog](../assets/01-1-2-new-solution-dialog.png)
-
 2. Click **Create**
 
-![Solution Created](../assets/01-1-2-solution-created.png)
+![Solution Created](exercises/images/01-1-2-solution-created.png)
 
 ### Step 3: Work Within Your Solution
 
@@ -71,8 +64,6 @@ From now on, **all components will be created within this solution**. This ensur
 - ✅ Easy deployment between environments  
 - ✅ Clean application lifecycle management
 - ✅ Simplified backup and version control
-
-![Solution Overview](../assets/01-1-3-solution-overview.png)
 
 ---
 
@@ -84,22 +75,22 @@ From now on, **all components will be created within this solution**. This ensur
 1. You should now be **inside your Expense Tracker App solution**
 2. Click **+ New** → **Table** → **Table**
 
-![New Table Menu](../assets/01-2-4-new-table-menu.png)
+![New Table Menu](exercises/images/01-2-4-new-table-menu.png)
 
 3. In the **New table** panel:
    - **Display name**: `Trip`
    - **Plural display name**: `Trips` (auto-populated)
    - **Name**: `[prefix]_Trip` (e.g., `lf_Trip` - note your initials prefix)
 
-![Table Creation Dialog](../assets/01-2-4-table-creation-dialog.png)
+![Table Creation Dialog](exercises/images/01-2-4-table-creation-dialog.png)
 
 4. Click **Save**
 
-![Table Designer Empty](../assets/01-2-4-table-designer-empty.png)
+![Table Designer Empty](exercises/images/01-2-4-table-designer-empty.png)
 
 5. You're now in the table designer. Add the following columns by clicking **+ New column**:
 
-![Add Column Dialog](../assets/01-2-4-add-column-dialog.png)
+![Add Column Dialog](exercises/images/01-2-4-add-column-dialog.png)
 
 | Column Name      | Data Type | Required | Description                                 |
 | ---------------- | --------- | -------- | ------------------------------------------- |
@@ -118,7 +109,7 @@ From now on, **all components will be created within this solution**. This ensur
    - Customer Visit
    - Other
 
-![Choice Field Config](../assets/01-2-4-choice-field-config.png)
+![Choice Field Config](exercises/images/01-2-4-choice-field-config.png)
 
 8. For **Trip Status**, add these choices:
    - Planning (Default)
@@ -128,13 +119,13 @@ From now on, **all components will be created within this solution**. This ensur
 
 9. Click **Save** (this saves the table to your solution)
 
-![Trip Table Complete](../assets/01-2-4-trip-table-complete.png)
+![Trip Table Complete](exercises/images/01-2-4-trip-table-complete.png)
 
 ### Step 5: Create the Expense Report Table
 
 1. From your solution, click **+ New** → **Table** → **Table**
 
-![Expense Report Creation](../assets/01-2-5-expense-report-creation.png)
+![Expense Report Creation](exercises/images/01-2-5-expense-report-creation.png)
 
 2. In the **New table** panel:
    - **Display name**: `Expense Report`
@@ -143,7 +134,7 @@ From now on, **all components will be created within this solution**. This ensur
 3. Click **Save**
 4. Add the following columns by clicking **+ New column**:
 
-![Expense Table Designer](../assets/01-2-5-expense-table-designer.png)
+![Expense Table Designer](exercises/images/01-2-5-expense-table-designer.png)
 
 | Column Name            | Data Type | Required | Description                           |
 | ---------------------- | --------- | -------- | ------------------------------------- |
@@ -171,7 +162,7 @@ From now on, **all components will be created within this solution**. This ensur
 
 6. **Don't save yet** - we need to add the lookup relationship first
 
-![Lookup Field Config](../assets/01-2-5-lookup-field-config.png)
+![Lookup Field Config](exercises/images/01-2-5-lookup-field-config.png)
 
 ---
 
@@ -186,15 +177,15 @@ From now on, **all components will be created within this solution**. This ensur
    - **Related table**: Trip
    - **Required**: Yes
 
-![Lookup Configuration](../assets/01-3-6-lookup-configuration.png)
+![Lookup Configuration](exercises/images/01-3-6-lookup-configuration.png)
 
 4. Click **Save** to save the relationship
 
-![Relationship Created](../assets/01-3-6-relationship-created.png)
+![Relationship Created](exercises/images/01-3-6-relationship-created.png)
 
 5. Click **Save and exit** to finish the Expense Report table
 
-![Solution With Tables](../assets/01-3-6-solution-with-tables.png)
+![Solution With Tables](exercises/images/01-3-6-solution-with-tables.png)
 
 ### Understanding the Relationship
 You've just created a **1:N (one-to-many)** relationship where:
