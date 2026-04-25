@@ -466,19 +466,19 @@ Power Platform automatically generated a sitemap for your model-driven app. A si
 
 ### Built-in Features You Get "For Free"
 
-✅ **Complete CRUD Operations**: Create, Read, Update, Delete - no coding required
+- **Complete CRUD Operations**: Create, Read, Update, Delete - no coding required
 
-✅ **Data Validation**: Required fields, data type validation automatically enforced
+- **Data Validation**: Required fields, data type validation automatically enforced
 
-✓️ **Relationship Navigation**: Select from trips to expenses and back seamlessly  
+- **Relationship Navigation**: Select from trips to expenses and back seamlessly  
 
-✅ **Search and Filtering**: Use the search box and filter options in views
+- **Search and Filtering**: Use the search box and filter options in views
 
-✅ **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-✅ **Security**: Built-in role-based security (when configured)
+- **Security**: Built-in role-based security (when configured)
 
-✅ **Audit Trail**: Tracks who created/modified records and when (when enabled)
+- **Audit Trail**: Tracks who created/modified records and when (when enabled)
 
 ### The Power of Model-Driven Apps
 
@@ -516,11 +516,11 @@ If you finish early, try these enhancements:
 ## 🥳 Exercise Complete!
 
 **You've successfully built a complete business application with:**
-- ✅ Two related tables with proper data structure
-- ✅ Customized forms for optimal user experience  
-- ✅ Tailored views for efficient data management
-- ✅ A model-driven app with full CRUD functionality
-- ✅ Understanding of built-in vs. custom functionality
+- Two related tables with proper data structure
+- Customized forms for optimal user experience  
+- Tailored views for efficient data management
+- A model-driven app with full CRUD functionality
+- Understanding of built-in vs. custom functionality
 
 **Next Steps**: In Exercise 2, you'll learn how to create custom pages that bring canvas app flexibility into your model-driven app while maintaining the enterprise structure you just built.
 
