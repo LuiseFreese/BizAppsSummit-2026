@@ -33,8 +33,10 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
 
 - **01-2-4-global-choice-creation** - Choice field showing "Sync with global choice" option and "+ New choice" dialog
+- **01-2-4-create-global-choice** - Creating the actual global choice set with name and values configuration
+- **01-2-4-sync-with-global-choice** - Choice column configuration showing how to sync with the newly created global choice
 - **01-2-4-trip-purpose-values** - Creating "Trip Purpose Values" global choice set with all options
-- **01-2-4-trip-status-choice** - Creating "Trip Status Values" global choice set with status options
+
 - **01-2-4-trip-table-complete** - Trip table with all columns added, showing detailed data types and formats
 
 ### Step 5: Create the Expense Report Table
