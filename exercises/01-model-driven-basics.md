@@ -17,9 +17,27 @@ We're building an expense tracking system where:
 - Build a model-driven app with minimal configuration
 - Understand built-in CRUD operations
 
+## Exercise Structure: Mainquests & Sidequests
+
+> [!TIP]
+> **Gaming-Inspired Learning**: This exercise uses a gaming approach to content organization:
+
+**🎯 Mainquests** (Required for Everyone):
+- Core functionality that everyone should complete
+- Essential skills needed for model-driven app development
+- Designed to be achievable within the time allocated
+
+**⭐ Sidequests** (Optional for Fast Finishers):
+- Advanced features and explorations for those who complete mainquests early
+- Deeper dives into platform capabilities
+- Challenge yourself if you have extra time!
+
+> [!IMPORTANT]
+> **Pacing Strategy**: Focus on completing all mainquests first. Only attempt sidequests if you finish early and want additional challenges.
+
 ---
 
-## Part 1: Create Solution and Publisher
+## 🎯 Mainquest Part 1: Create Solution and Publisher
 
 ### Step 1: Create a Publisher
 
@@ -67,7 +85,7 @@ From now on, **all components will be created within this solution**. This ensur
 
 ---
 
-## Part 2: Create the Tables
+## 🎯 Mainquest Part 2: Create the Tables
 
 
 ### Step 4: Create the Trip Table
@@ -234,7 +252,7 @@ Your table should now look like this:
 
 ---
 
-## Part 3: Customize Forms and Views
+## 🎯 Mainquest Part 3: Customize Forms and Views
 
 ### Step 6: Customize the Trip Main Form
 
@@ -282,18 +300,28 @@ Your table should now look like this:
    - **General section**: Organize fields in two columns:
      - Left column: `Destination`, `Start Date`, `Trip Purpose`  
      - Right column: `Estimated Budget`, `End Date`
-   - Add a new **Details** section below with: `Business Justification` (if you added this field)
 
 7. **Add a Related Records subgrid**:
-   - From the **Table columns** panel, drag **Related** → **Expenses** onto the form
+   - Add a new **Details** section below the General section  
+   - From the **Components** panel, select **Subgrid** and drag it onto the **Details** section
+   - In the subgrid configuration:
+     - **Related table**: Select **Expenses**
+     - **Default view**: Select **Active Expenses** (or the default view)
+     - **Show related records**: Keep this checked ✅
+   - Select **Done**
    - This will show all expenses related to this trip
-   - Position it at the bottom of the form
 
-8. Select **Save and publish**
+![Add Subgrid](images/01-3-6-add-subgrid.png)
+
+8. **Hide section labels** (optional for cleaner appearance):
+   - Select each section on your form
+   - In the **Properties** panel, uncheck **Show label** for a cleaner look
+
+9. Select **Save and publish**
 
 ### Step 7: Customize the Trip Main View
 
-1. Still in the Trip table, select **Views** tab
+1. Back in the Trip table, select **Views** tab
 2. Find the **Active Trips** view and select to edit it
 3. Configure the view columns (in this order):
    - `Trip Name`
@@ -319,7 +347,7 @@ Your table should now look like this:
 
 4. Select **Save and publish**
 
-### Step 9: Customize the Expense Main View  
+### Step 8: Customize the Expense Main View  
 
 1. In Expense table, select **Views** tab
 2. Edit the **Active Expenses** view
@@ -336,9 +364,9 @@ Your table should now look like this:
 
 ---
 
-## Part 4: Create the Model-Driven App
+## 🎯 Mainquest Part 4: Create the Model-Driven App
 
-### Step 10: Build the App
+### Step 9: Build the App
 
 1. From within your **Expense Tracker App solution**, select **+ New** → **App** → **Model-driven app**
 2. In the app designer:
@@ -347,14 +375,14 @@ Your table should now look like this:
 3. Select **Create**
 
 4. In the modern app designer:
-   - Select **+ Add page** → **Table based view and form**
-   - Select **Trip** table (it will show with your prefix, e.g., `lf_Trip`)
+   - Select **+ Add page** → **Dataverse table**
+   - Select **Trip** table 
    - This automatically adds both the view and form pages for trips
    - Select **Add**
 
 5. Repeat for Expenses:
-   - Select **+ Add page** → **Table based view and form** 
-   - Select **Expense** table (it will show with your prefix, e.g., `lf_Expense`)
+   - Select **+ Add page** → **Dataverse table** 
+   - Select **Expense** table
    - Select **Add**
 
 6. **Organize Navigation**:
@@ -367,9 +395,9 @@ Your table should now look like this:
 > [!TIP]
 > **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
 
-### Step 11: Test Your App
+### Step 10: Test Your App
 
-1. Select **Play** to launch your app
+1. Select **Play** (top left corner) to launch your app
 2. **Test the built-in CRUD operations**:
 
    **Create**: 
@@ -399,6 +427,41 @@ Your table should now look like this:
 
 ---
 
+## ⭐ Sidequest: Explore the Auto-Generated Sitemap
+
+> [!NOTE]
+> **Optional Challenge**: Complete this sidequest if you finish early and want to explore advanced platform features!
+
+**What is a Sitemap?**
+Power Platform automatically generated a sitemap for your model-driven app. A sitemap defines the navigation structure and determines what users see in the left navigation panel.
+
+**Your Mission**:
+1. **Discover the Sitemap**:
+   - In your app designer (where you built the app), look for **Navigation** or **Sitemap** options
+   - Explore how Power Platform automatically organized your tables into navigation
+
+2. **Evaluate the User Experience**:
+   - As a business user, how intuitive is this navigation?
+   - What would you change to improve user workflows?
+   - Consider: Should Trips or Expenses be first? Why?
+
+3. **Learn More**: 
+   📚 **Microsoft Documentation**: [Create a model-driven app sitemap](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-site-map-app)
+
+> [!TIP]
+> **Sidequest Hints**: 
+> - 🔍 **Finding Sitemap**: In app designer, look for **Navigation** in the left panel or **Sitemap** button in toolbar
+> - 🎯 **What to Look For**: Notice how tables became "Areas" and "Groups" - this is automatic organization
+> - 💭 **Business Thinking**: Consider user workflows - do expense submitters start with trips or individual expenses?
+> - ⚙️ **Customization Ideas**: Think about grouping, renaming, or adding custom areas for different user roles
+
+**Reflection Questions**:
+- How does the automatically generated structure compare to your business workflow?
+- What customizations would make this navigation more user-friendly for expense tracking?
+- When might you want to create custom navigation groups or hide certain areas?
+
+---
+
 ## Part 5: Understanding What You Built
 
 ### Built-in Features You Get "For Free"
@@ -424,19 +487,12 @@ Your table should now look like this:
 - **Convention over configuration**: Sensible defaults for forms, views, and navigation
 - **Built-in business logic**: Standard operations work immediately without custom development
 
-**When would you customize the command bar?**
-While most standard operations are built-in, you might add custom buttons for:
-- Triggering Power Automate flows
-- Complex business processes (e.g., "Submit for Approval")
-- Integration with external systems
-- Custom calculations or reports
-
-> [!TIP]
-> **Pro Tip**: The component library approach mentioned in the overview is the easiest way to add custom command bar buttons, but for most business apps, the standard commands are sufficient.
-
 ---
 
-## 🎯 Challenge Exercise
+## ⭐ Advanced Sidequests: Power User Challenges
+
+> [!NOTE]
+> **Expert-Level Optional Content**: Tackle these advanced challenges if you've completed all mainquests and want to push your skills further!
 
 If you finish early, try these enhancements:
 
@@ -448,9 +504,16 @@ If you finish early, try these enhancements:
 
 4. **Create a Custom View**: Build a view that shows only expenses over $50 from the last 30 days
 
+> [!TIP]
+> **Sidequest Hints**: 
+> - **Status Reason**: Go to Expense table → Columns → Status Reason (it may already exist!) - configure choice values
+> - **Business Rule**: Table → Business rules → New rule. Use "If Amount > 100 then make Business Justification required"
+> - **Calculated Field**: New column → Data type "Calculated or Rollup" → choose Rollup → SUM related Expenses.Amount
+> - **Custom View**: Views tab → New view → Add filters for Amount > 50 AND Created On = Last 30 days
+
 ---
 
-## ✅ Exercise Complete!
+## 🥳 Exercise Complete!
 
 **You've successfully built a complete business application with:**
 - ✅ Two related tables with proper data structure
@@ -462,20 +525,6 @@ If you finish early, try these enhancements:
 **Next Steps**: In Exercise 2, you'll learn how to create custom pages that bring canvas app flexibility into your model-driven app while maintaining the enterprise structure you just built.
 
 ---
-
-## Troubleshooting
-
-**Can't see your tables in app designer?** 
-- Refresh the browser and try again
-- Make sure tables are saved and published
-
-**Lookup field not showing Trip names?**
-- Verify the Trip table has a "`Name`" or primary field configured
-- Check that the relationship was created correctly
-
-**App won't load?**
-- Ensure you have sufficient permissions in the environment
-- Try publishing the app again
 
 **Need Help?** Raise your hand - we're here to help! 🙋‍♀️🙋‍♂️
 
