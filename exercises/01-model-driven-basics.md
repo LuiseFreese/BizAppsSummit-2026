@@ -27,7 +27,7 @@ We're building an expense tracking system where:
 2. Select your environment
 3. Click **Solutions** in the left navigation
 
-![Solutions Page](../images/01-1-1-solutions-page.png)
+![Solutions Page](images/01-1-1-solutions-page.png)
 
 4. Click **+ New solution**
 5. Before we create the solution, we need a publisher. Click **+ New publisher**
@@ -38,7 +38,7 @@ We're building an expense tracking system where:
    - **Option value prefix**: `10000` (leave default or use provided number)
    - **Contact details**: Add your email
 
-![Publisher Form Filled](../images/01-1-1-publisher-form-filled.png)
+![Publisher Form Filled](images/01-1-1-publisher-form-filled.png)
 
 7. Click **Save**
 
@@ -55,7 +55,7 @@ We're building an expense tracking system where:
 
 2. Click **Create**
 
-![Solution Created](../images/01-1-2-solution-created.png)
+![Solution Created](images/01-1-2-solution-created.png)
 
 ### Step 3: Work Within Your Solution
 
@@ -75,22 +75,22 @@ From now on, **all components will be created within this solution**. This ensur
 1. You should now be **inside your Expense Tracker App solution**
 2. Click **+ New** → **Table** → **Table**
 
-![New Table Menu](../images/01-2-4-new-table-menu.png)
+![New Table Menu](images/01-2-4-new-table-menu.png)
 
 3. In the **New table** panel:
    - **Display name**: `Trip`
    - **Plural display name**: `Trips` (auto-populated)
    - **Name**: `[prefix]_Trip` (e.g., `lf_Trip` - note your initials prefix)
 
-![Table Creation Dialog](../images/01-2-4-table-creation-dialog.png)
+![Table Creation Dialog](images/01-2-4-table-creation-dialog.png)
 
 4. Click **Save**
 
-![Table Designer Empty](../images/01-2-4-table-designer-empty.png)
+![Table Designer Empty](images/01-2-4-table-designer-empty.png)
 
 5. You're now in the table designer. Add the following columns by clicking **+ New column**:
 
-![Add Column Dialog](../images/01-2-4-add-column-dialog.png)
+![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
 | Column Name      | Data Type | Required | Description                                 |
 | ---------------- | --------- | -------- | ------------------------------------------- |
@@ -109,7 +109,7 @@ From now on, **all components will be created within this solution**. This ensur
    - Customer Visit
    - Other
 
-![Choice Field Config](../images/01-2-4-choice-field-config.png)
+![Choice Field Config](images/01-2-4-choice-field-config.png)
 
 8. For **Trip Status**, add these choices:
    - Planning (Default)
@@ -119,13 +119,13 @@ From now on, **all components will be created within this solution**. This ensur
 
 9. Click **Save** (this saves the table to your solution)
 
-![Trip Table Complete](../images/01-2-4-trip-table-complete.png)
+![Trip Table Complete](images/01-2-4-trip-table-complete.png)
 
 ### Step 5: Create the Expense Report Table
 
 1. From your solution, click **+ New** → **Table** → **Table**
 
-![Expense Report Creation](../images/01-2-5-expense-report-creation.png)
+![Expense Report Creation](images/01-2-5-expense-report-creation.png)
 
 2. In the **New table** panel:
    - **Display name**: `Expense Report`
@@ -134,7 +134,7 @@ From now on, **all components will be created within this solution**. This ensur
 3. Click **Save**
 4. Add the following columns by clicking **+ New column**:
 
-![Expense Table Designer](../images/01-2-5-expense-table-designer.png)
+![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
 | Column Name            | Data Type | Required | Description                           |
 | ---------------------- | --------- | -------- | ------------------------------------- |
@@ -162,7 +162,7 @@ From now on, **all components will be created within this solution**. This ensur
 
 6. **Don't save yet** - we need to add the lookup relationship first
 
-![Lookup Field Config](../images/01-2-5-lookup-field-config.png)
+![Lookup Field Config](images/01-2-5-lookup-field-config.png)
 
 ---
 
@@ -177,15 +177,15 @@ From now on, **all components will be created within this solution**. This ensur
    - **Related table**: Trip
    - **Required**: Yes
 
-![Lookup Configuration](../images/01-3-6-lookup-configuration.png)
+![Lookup Configuration](images/01-3-6-lookup-configuration.png)
 
 4. Click **Save** to save the relationship
 
-![Relationship Created](../images/01-3-6-relationship-created.png)
+![Relationship Created](images/01-3-6-relationship-created.png)
 
 5. Click **Save and exit** to finish the Expense Report table
 
-![Solution With Tables](../images/01-3-6-solution-with-tables.png)
+![Solution With Tables](images/01-3-6-solution-with-tables.png)
 
 ### Understanding the Relationship
 You've just created a **1:N (one-to-many)** relationship where:
