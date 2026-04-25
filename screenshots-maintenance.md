@@ -62,44 +62,19 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 ### Step 8: Customize the Trip Main View
 - **01-3-7-views-tab** - Trip table Views tab showing available views
 - **01-3-7-view-designer** - View designer showing column configuration
-- **01-3-7-view-columns-configured** - View with proper columns in correct order
-- **01-3-7-sort-configuration** - Sort settings configuration
 
-### Step 9: Customize the Expense Main Form
-- **01-3-8-expense-form-designer** - Expense form in designer
-- **01-3-8-expense-form-layout** - Complete expense form showing all sections, fields, and subgrid layout
-- **01-3-8-completed-expense-form** - Final customized Expense form
 
-### Step 10: Customize the Expense Main View  
-- **01-3-9-expense-view-designer** - Expense view designer
-- **01-3-9-expense-view-columns** - Expense view with configured columns including `Trip Reference` lookup
-- **01-3-9-completed-expense-view** - Final Expense view
 
 ---
 
 ## Part 4: Create the Model-Driven App
 
-### Step 11: Build the App
+### Step 9: Build the App
 - **01-4-10-new-app-menu** - Solution "+ New" menu with "App" > "Model-driven app" highlighted
 - **01-4-10-app-creation-dialog** - New model-driven app creation dialog
-- **01-4-10-modern-app-designer** - Modern app designer interface (empty state)
-- **01-4-10-add-page-menu** - "+ Add page" menu with "Table based view and form" option
-- **01-4-10-table-selection** - Table selection dialog showing prefixed table names
-- **01-4-10-trip-pages-added** - App designer with Trip pages added
-- **01-4-10-expense-pages-added** - App designer with both Trip and Expense pages
-- **01-4-10-navigation-configured** - Navigation panel showing organized menu structure
-- **01-4-10-app-save-publish** - Save and Publish buttons in app designer
 
-### Step 12: Test Your App
-- **01-4-11-play-button** - "Play" button to launch the app
+### Step 10: Test Your App
 - **01-4-11-running-app** - Live app showing navigation and main interface
-- **01-4-11-trips-list-view** - Trips list view with sample data
-- **01-4-11-new-trip-button** - "+ New" button in command bar highlighted
-- **01-4-11-trip-form-create** - New trip creation form
-- **01-4-11-trip-detail-view** - Trip detail form showing related expenses subgrid
-- **01-4-11-new-expense-from-subgrid** - Creating new expense from subgrid with Trip auto-populated
-- **01-4-11-expense-form-filled** - Completed expense form
-- **01-4-11-relationship-navigation** - Showing relationship between trips and expenses in action
 
 ---
 
