@@ -52,7 +52,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 ### Step 6: Customize the Trip Main Form
 - **01-3-6-table-forms-tab** - Trip table with Forms tab selected showing available forms
-- **01-3-6-form-designer** - Form designer showing Trip form layout
+- **01-3-6-form-designer** - Form designer interface with callouts showing: 1) Table columns panel (left side) for familiarization with created fields, 2) Owner field highlighted for hiding, 3) Properties panel (right side) demonstrating that everything has configurable properties, 4) Layout switcher (lower left) showing responsive design options
 - **01-3-6-header-customization** - Form header section being customized with fields
 - **01-3-6-two-column-layout** - General section with two-column field layout
 - **01-3-6-add-subgrid** - Process of adding Related Expenses subgrid
