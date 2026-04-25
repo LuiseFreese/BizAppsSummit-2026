@@ -314,6 +314,13 @@ For lookup/dropdown values (categories, types, etc.):
 5. **Testing**: CRUD operations and relationship validation
 6. **Extension**: Challenge exercises for advanced participants
 
+**Documentation Formatting Standards:**
+- **Sequential Steps**: Numbered procedures for actions
+- **💡 Tips**: Blue callouts for insights and explanations  
+- **✅ Best Practices**: Green callouts for guidance and standards
+- **❌ Anti-patterns**: Red callouts for what to avoid
+- **> Quotes**: For important context or background information
+
 ### Advanced Form Layout Patterns
 
 **Header Section Strategy:**

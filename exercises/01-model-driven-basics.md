@@ -140,14 +140,14 @@ From now on, **all components will be created within this solution**. This ensur
 
 > 💡 **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
 
-9. Configure **Data Types and Formats** carefully:
-   - **Text fields**: Use "Text" format (not "Text area" unless you need multiple lines)
-   - **Date fields**: Select "Date and time" data type, then choose "Date only" format
-   - **Currency fields**: Will automatically use your environment's currency format
-   - **Choice fields**: Always sync with global choices for reusability
-   - **Descriptions**: Write clear, user-friendly descriptions - they become tooltips in the app for better usability and accessibility compliance
+> ✅ **Data Types and Formats Best Practices**: Configure these carefully for optimal user experience:
+> - **Text fields**: Use "Text" format (not "Text area" unless you need multiple lines)
+> - **Date fields**: Select "Date and time" data type, then choose "Date only" format  
+> - **Currency fields**: Will automatically use your environment's currency format
+> - **Choice fields**: Always sync with global choices for reusability
+> - **Descriptions**: Write clear, user-friendly descriptions - they become tooltips in the app for better usability and accessibility compliance
 
-10. Select **Save** (this saves the table to your solution)
+9. Select **Save** (this saves the table to your solution)
 
 ![Trip Table Complete](images/01-2-4-trip-table-complete.png)
 
