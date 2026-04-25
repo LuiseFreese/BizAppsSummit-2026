@@ -29,15 +29,23 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-new-table-menu** - Solution "+ New" menu with "Table" → "Table (advanced properties)" option highlighted (not just "Tables")
 - **01-2-4-table-creation-dialog** - New table dialog for Trip table
 - **01-2-4-primary-column-config** - Primary column configuration showing rename from "Name" to "Trip Name"
-- **01-2-4-table-designer-empty** - Empty table designer after creating Trip table
-- **01-2-4-add-column-dialog** - "New column" dialog showing column configuration options
-- **01-2-4-choice-field-config** - Choice field configuration for "Trip Purpose" showing choice options
-- **01-2-4-trip-table-complete** - Trip table with all columns added and visible in designer
+- **01-2-4-table-designer-empty** - Empty table designer after creating Trip table with system Status column visible
+- **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
+- **01-2-4-date-format-selection** - Date field configuration showing "Date and time" data type with "Date only" format selected
+- **01-2-4-text-format-selection** - Text field configuration showing "Text" data type with "Text" format selected
+- **01-2-4-global-choice-creation** - Choice field showing "Sync with global choice" option and "+ New choice" dialog
+- **01-2-4-trip-purpose-values** - Creating "Trip Purpose Values" global choice set with all options
+- **01-2-4-trip-status-choice** - Creating "Trip Status Values" global choice set with status options
+- **01-2-4-trip-table-complete** - Trip table with all columns added, showing detailed data types and formats
 
 ### Step 5: Create the Expense Report Table
 - **01-2-5-expense-report-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
 - **01-2-5-primary-column-config** - Primary column configuration showing rename from "Name" to "Expense Title"
-- **01-2-5-expense-table-designer** - Expense Report table in designer with multiple columns
+- **01-2-5-expense-table-designer** - Expense Report table in designer with multiple columns showing data types and formats
+- **01-2-5-text-area-format** - Text field configuration showing "Text" data type with "Text area" format for Business Justification
+- **01-2-5-yesno-choice-format** - Choice field configuration showing Choice data type with "Yes/No" format for Receipt Attached
+- **01-2-5-expense-category-choice** - Creating "Expense Category Values" global choice set
+- **01-2-5-payment-method-choice** - Creating "Payment Method Values" global choice set
 - **01-2-5-lookup-field-config** - Trip lookup field configuration showing related table selection
 
 ---
@@ -134,6 +142,15 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **Environment**: Use clean demo environment without unrelated tables/apps
 - **Timing**: Some screens may need multiple attempts due to auto-save behaviors
 - **Responsive**: Consider mobile-friendly cropping for key UI elements
+- **Data Type/Format Combinations**: Clearly show the two-step process:
+  - First select data type (e.g., "Date and time")
+  - Then select format (e.g., "Date only")
+- **Global Choice Sets**: Always demonstrate "Sync with global choice" selection and show the naming convention with "Values" suffix
+- **Status Column Awareness**: Show that system Status column exists, separate from custom status fields
+- **Format Examples**: 
+  - Text fields: "Text" format (single line) vs "Text area" format (multi-line)
+  - Date fields: "Date and time" data type → "Date only" format
+  - Yes/No fields: "Choice" data type → "Yes/No" format (not standalone Yes/No data type)
 
 ## Review Status
 - [ ] Screenshot list reviewed and approved

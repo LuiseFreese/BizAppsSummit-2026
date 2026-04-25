@@ -96,35 +96,57 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Primary Column Config](images/01-2-4-primary-column-config.png)
 
-6. You're now in the table designer. Add the following columns by selecting **+ New column**:
+6. **Understanding System vs Business Status**: Every Dataverse table automatically includes a **Status** column for system-level record state (Active/Inactive). This is different from business status tracking, so we create our own **Trip Status** column for business logic (Planning, In Progress, etc.). This is why we name it "Trip Status" - to differentiate from the system Status.
+
+7. Add the following columns by selecting **+ New column**:
 
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
-| Column Name      | Data Type | Required | Description                                 |
-| ---------------- | --------- | -------- | ------------------------------------------- |
-| Destination      | Text      | Yes      | Where the trip is going                     |
-| Start Date       | Date Only | Yes      | Trip start date                             |
-| End Date         | Date Only | Yes      | Trip end date                               |
-| Trip Purpose     | Choice    | No       | Business, Training, Conference, etc.        |
-| Estimated Budget | Currency  | No       | Planned budget for the trip                 |
-| Trip Status      | Choice    | Yes      | Planning, In Progress, Completed, Cancelled |
+| Column Name      | Data Type     | Format      | Business Required | Description                     |
+| ---------------- | ------------- | ----------- | ----------------- | ------------------------------- |
+| Destination      | Singe Line of Text          | Text        | Yes               | Where the trip is going         |
+| Start Date       | Date and time | Date only   | Yes               | Trip start date                 |
+| End Date         | Date and time | Date only   | Yes               | Trip end date                   |
+| Trip Purpose     | Choice        | N/A         | No                | Business, Training, etc.        |
+| Estimated Budget | Currency      | Currency    | No                | Planned budget for the trip     |
+| Trip Status      | Choice        | N/A         | Yes               | Planning, In Progress, etc.     |
 
-7. For **Trip Purpose**, add these choices:
-   - Business Meeting
-   - Training
-   - Conference
-   - Customer Visit
-   - Other
+8. **Create Global Choice Sets**: Instead of creating local choices, we'll create global choice sets that can be reused across tables. This ensures consistency and easier maintenance.
 
-![Choice Field Config](images/01-2-4-choice-field-config.png)
+   **For Trip Purpose:**
+   - When configuring the Trip Purpose column, select **Sync with global choice**
+   - Select **+ New choice** to create a new global choice set
+   - Name: `Trip Purpose Values` (note the "Values" suffix - this is a naming convention)
+   - Add these choices:
+     - Business Meeting
+     - Training
+     - Conference
+     - Customer Visit
+     - Other
 
-8. For **Trip Status**, add these choices:
-   - Planning (Default)
-   - In Progress  
-   - Completed
-   - Cancelled
+![Global Choice Creation](images/01-2-4-global-choice-creation.png)
 
-9. Select **Save** (this saves the table to your solution)
+   **For Trip Status:**
+   - When configuring the Trip Status column, select **Sync with global choice**
+   - Select **+ New choice** to create a new global choice set
+   - Name: `Trip Status Values`
+   - Add these choices:
+     - Planning (Default)
+     - In Progress
+     - Completed
+     - Cancelled
+
+![Trip Status Choice](images/01-2-4-trip-status-choice.png)
+
+> 💡 **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
+
+9. Configure **Data Types and Formats** carefully:
+   - **Text fields**: Use "Text" format (not "Text area" unless you need multiple lines)
+   - **Date fields**: Select "Date and time" data type, then choose "Date only" format
+   - **Currency fields**: Will automatically use your environment's currency format
+   - **Choice fields**: Always sync with global choices for reusability
+
+10. Select **Save** (this saves the table to your solution)
 
 ![Trip Table Complete](images/01-2-4-trip-table-complete.png)
 
@@ -150,28 +172,50 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
-| Column Name            | Data Type | Required | Description                           |
-| ---------------------- | --------- | -------- | ------------------------------------- |
-| Expense Date           | Date Only | Yes      | When the expense occurred             |
-| Amount                 | Currency  | Yes      | Cost of the expense                   |
-| Expense Category       | Choice    | Yes      | Meals, Transport, Accommodation, etc. |
-| Payment Method         | Choice    | Yes      | Company Card, Personal, Cash          |
-| Receipt Attached       | Yes/No    | No       | Whether receipt is available          |
-| Business Justification | Text      | No       | Why this expense was necessary        |
-| Trip                   | Lookup    | Yes      | Related trip (we'll configure this)   |
+| Column Name            | Data Type     | Format      | Business Required | Description                     |
+| ---------------------- | ------------- | ----------- | ----------------- | ------------------------------- |
+| Expense Date           | Date and time | Date only   | Yes               | When the expense occurred       |
+| Amount                 | Currency      | Currency    | Yes               | Cost of the expense             |
+| Expense Category       | Choice        | N/A         | Yes               | Meals, Transport, etc.          |
+| Payment Method         | Choice        | N/A         | Yes               | Company Card, Personal, Cash    |
+| Receipt Attached       | Choice        | Yes/No      | No                | Whether receipt is available    |
+| Business Justification | Text          | Text area   | No                | Why this expense was necessary  |
+| Trip                   | Lookup        | N/A         | Yes               | Related trip (configure below)  |
 
-6. For **Expense Category**, add these choices:
-   - Meals & Entertainment
-   - Transportation
-   - Accommodation
-   - Fuel
-   - Parking
-   - Other
+6. **Create Global Choice Sets** for reusable options:
 
-7. For **Payment Method**, add these choices:
-   - Company Credit Card
-   - Personal Reimbursement
-   - Cash Advance
+   **For Expense Category:**
+   - When configuring the Expense Category column, select **Sync with global choice**
+   - Select **+ New choice** to create a new global choice set
+   - Name: `Expense Category Values`
+   - Add these choices:
+     - Meals & Entertainment
+     - Transportation
+     - Accommodation
+     - Fuel
+     - Parking
+     - Other
+
+![Expense Category Choice](images/01-2-5-expense-category-choice.png)
+
+   **For Payment Method:**
+   - When configuring the Payment Method column, select **Sync with global choice**
+   - Select **+ New choice** to create a new global choice set
+   - Name: `Payment Method Values`
+   - Add these choices:
+     - Company Credit Card
+     - Personal Reimbursement
+     - Cash Advance
+
+![Payment Method Choice](images/01-2-5-payment-method-choice.png)
+
+> 💡 **Global Choice Reuse**: Notice how we're building a library of reusable choice sets. In future exercises, we might reuse these same choice sets or create new ones following the "Values" naming convention.
+
+7. **Important Format Notes**:
+   - **Receipt Attached**: Use Choice data type with "Yes/No" format (not the standalone Yes/No data type). This approach is more flexible and consistent with other choice fields.
+   - **Business Justification**: Use Text data type with "Text area" format for multi-line input
+   - **Date fields**: Always select "Date and time" data type, then choose "Date only" format
+   - **Currency fields**: Will automatically use your environment's currency settings
 
 8. **Don't save yet** - we need to add the lookup relationship first
 
