@@ -230,7 +230,7 @@ Your table should now look like this:
 
 8. Your table is now complete!
 
-![Solution With Tables](images/01-3-6-solution-with-tables.png)
+![Solution With Tables](images/01-2-5-solution-with-tables.png)
 
 ---
 
