@@ -52,8 +52,8 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 
 ### Part 1: Foundation Building & Data Platform Decisions
 - **Lecture**: [SharePoint Lists vs Dataverse - When to Use What](./lectures/01-sharepoint-vs-dataverse.md)
-- **Exercise 1**: [Understanding Dataverse Tables](./exercises/01-dataverse-tables.md)
-- **Exercise 2**: [Building Your First Model-Driven App](./exercises/02-model-driven-basics.md)
+- **Exercise 1**: [Understanding Dataverse Tables](./exercises/02-dataverse-tables.md)
+- **Exercise 2**: [Building Your First Model-Driven App](./exercises/03-model-driven-basics.md)
 
 ### Part 2: Custom Pages Development  
 - **Exercise 3**: [Creating Your First Custom Page](./exercises/03-custom-page-basics.md)
