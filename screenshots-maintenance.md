@@ -67,7 +67,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 ### Step 9: Customize the Expense Main Form
 - **01-3-8-expense-form-designer** - Expense form in designer
-- **01-3-8-expense-form-layout** - Organized form with header and sections
+- **01-3-8-expense-form-layout** - Complete expense form showing all sections, fields, and subgrid layout
 - **01-3-8-completed-expense-form** - Final customized Expense form
 
 ### Step 10: Customize the Expense Main View  
