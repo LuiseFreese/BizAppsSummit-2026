@@ -138,8 +138,6 @@ From now on, **all components will be created within this solution**. This ensur
      - Completed
      - Cancelled
 
-![Trip Status Choice](images/01-2-4-trip-status-choice.png)
-
 > 💡 **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
 
 9. Configure **Data Types and Formats** carefully:

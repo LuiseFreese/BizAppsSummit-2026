@@ -230,6 +230,22 @@ For lookup/dropdown values (categories, types, etc.):
 
 ❌ **Default sorting**: Configure views with business-appropriate sorting
 
+❌ **Inconsistent documentation**: Maintain alignment between exercise content and screenshot references
+
+## Documentation Management Best Practices
+
+**Screenshot Reference Consistency:**
+- Maintain single source of truth for screenshot specifications
+- Remove image references from exercises when screenshots are deleted from maintenance docs
+- Use consistent naming convention: `01-<part>-<step>-<descriptive-title>`
+- Regularly audit image references for broken or outdated links
+
+**Workshop Documentation Patterns:**
+- Progressive disclosure: Build complexity gradually through exercises
+- Visual guidance: Strategic screenshot placement for key UI interactions
+- Consistent terminology: Use same action words throughout (e.g., "Select" not "Click")
+- Accessibility focus: Descriptions that become helpful tooltips
+
 ## Troubleshooting Common Issues
 
 **Tables not visible in app designer:**
