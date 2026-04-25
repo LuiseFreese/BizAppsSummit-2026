@@ -265,12 +265,19 @@ Your table should now look like this:
      - **Media**: Components for rich media content
      - **AI**: AI-powered components for enhanced functionality
    - **General Section**: Select the **General** section on your form and convert it to a **2 column layout** using the Properties panel
-   - **Hide Owner Field**: Find the **Owner** field and hide it by setting **Visible** to **No** in the Properties panel
+   - **Hide Owner Field**: Find the **Owner** field and hide it by **Hide** at the top
 
 > [!TIP]
 > **Component Library**: Power Platform provides a rich set of pre-built components. This component-driven approach means you can build sophisticated forms without coding - everything is drag-and-drop configuration.
 
 6. **Customize the form layout**:
+
+> [!IMPORTANT]
+> **Form Structure Foundation**: Before adding any components (grid, input, media), you must first create **sections** on your form. Sections are containers where components can be placed. Without sections, you cannot add any form elements.
+
+> [!TIP]
+> **Adding Components**: To add any new component to your form, use **drag and drop** from the left panels (Table columns, Components) directly onto your form sections. This intuitive method works for all form elements.
+
    - **Header section**: Add `Trip Name` and `Trip Status`
    - **General section**: Organize fields in two columns:
      - Left column: `Destination`, `Start Date`, `Trip Purpose`  
