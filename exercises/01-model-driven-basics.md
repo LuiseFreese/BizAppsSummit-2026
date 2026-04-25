@@ -228,7 +228,7 @@ Your table should now look like this:
 > [!IMPORTANT]
 > **Automatic Relationship Creation**: When you create a lookup column in Dataverse, it automatically creates the 1:N relationship for you! You don't need separate steps to "create the relationship" - the lookup column IS the relationship. This creates a one-to-many relationship where one Trip can have many Expenses.
 
-8. Your table is now complete and ready for customization
+8. Your table is now complete!
 
 ![Solution With Tables](images/01-3-6-solution-with-tables.png)
 
