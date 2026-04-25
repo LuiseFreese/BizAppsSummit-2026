@@ -26,7 +26,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 ## Part 2: Create the Tables
 
 ### Step 4: Create the Trip Table
-- **01-2-4-new-table-menu** - Solution "+ New" menu with "Table" option highlighted
+- **01-2-4-new-table-menu** - Solution "+ New" menu with "Table" → "Table (advanced properties)" option highlighted (not just "Tables")
 - **01-2-4-table-creation-dialog** - New table dialog for Trip table with prefix shown
 - **01-2-4-table-designer-empty** - Empty table designer after creating Trip table
 - **01-2-4-add-column-dialog** - "New column" dialog showing column configuration options
@@ -34,7 +34,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-trip-table-complete** - Trip table with all columns added and visible in designer
 
 ### Step 5: Create the Expense Report Table
-- **01-2-5-expense-report-creation** - Creating second table from solution
+- **01-2-5-expense-report-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
 - **01-2-5-expense-table-designer** - Expense Report table in designer with multiple columns
 - **01-2-5-lookup-field-config** - Trip lookup field configuration showing related table selection
 

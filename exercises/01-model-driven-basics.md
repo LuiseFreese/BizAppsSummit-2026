@@ -35,9 +35,7 @@ We're building an expense tracking system where:
    - **Display name**: `[Your Initials]` (e.g., "LF")
    - **Name**: `[yourinitials]` (e.g., "lf" - this will auto-populate)
    - **Prefix**: `[your initials]` (e.g., "lf" - keep it short, 2-4 characters)
-   - **Option value prefix**: `10000` (leave default or use provided number)
-   - **Contact details**: Add your email
-
+ 
 ![Publisher Form Filled](images/01-1-1-publisher-form-filled.png)
 
 7. Select **Create**
@@ -54,6 +52,8 @@ We're building an expense tracking system where:
    - **Description**: `Complete expense tracking solution for business trips`
 
 2. Select **Create**
+
+Your solution should now look like this: 
 
 ![Solution Created](images/01-1-2-solution-created.png)
 
@@ -73,7 +73,7 @@ From now on, **all components will be created within this solution**. This ensur
 ### Step 4: Create the Trip Table
 
 1. You should now be **inside your Expense Tracker App solution**
-2. Select **+ New** → **Table** → **Table**
+2. Select **+ New** → **Table** → **Table (advanced properties)**
 
 ![New Table Menu](images/01-2-4-new-table-menu.png)
 
@@ -123,7 +123,7 @@ From now on, **all components will be created within this solution**. This ensur
 
 ### Step 5: Create the Expense Report Table
 
-1. From your solution, select **+ New** → **Table** → **Table**
+1. From your solution, select **+ New** → **Table** → **Table (advanced properties)**
 
 ![Expense Report Creation](images/01-2-5-expense-report-creation.png)
 
