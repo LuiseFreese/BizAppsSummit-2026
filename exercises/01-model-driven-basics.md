@@ -26,15 +26,26 @@ We're building an expense tracking system where:
 1. Navigate to **Power Apps** ([make.powerapps.com](https://make.powerapps.com))
 2. Select your environment
 3. Click **Solutions** in the left navigation
+
+![Solutions Page](../assets/01-1-1-solutions-page.png)
+
 4. Click **+ New solution**
 5. Before we create the solution, we need a publisher. Click **+ New publisher**
+
+![New Publisher Dialog](../assets/01-1-1-new-publisher-dialog.png)
+
 6. Fill in the publisher details using **your initials**:
    - **Display name**: `[Your Initials] BizApps Summit` (e.g., "LF BizApps Summit")
    - **Name**: `[yourinitials]bizappssummit` (e.g., "lfbizappssummit" - this will auto-populate)
    - **Prefix**: `[your initials]` (e.g., "lf" - keep it short, 2-4 characters)
    - **Option value prefix**: `10000` (leave default or use provided number)
    - **Contact details**: Add your email
+
+![Publisher Form Filled](../assets/01-1-1-publisher-form-filled.png)
+
 7. Click **Save**
+
+![Publisher Created](../assets/01-1-1-publisher-created.png)
 
 > 💡 **Why use your initials?** This ensures each participant has a unique publisher prefix, avoiding conflicts when working in shared environments.
 
@@ -46,7 +57,12 @@ We're building an expense tracking system where:
    - **Publisher**: Select **[Your Initials] BizApps Summit** (the publisher you just created)
    - **Version**: `1.0.0.0` (default)
    - **Description**: `Complete expense tracking solution for business trips`
+
+![New Solution Dialog](../assets/01-1-2-new-solution-dialog.png)
+
 2. Click **Create**
+
+![Solution Created](../assets/01-1-2-solution-created.png)
 
 ### Step 3: Work Within Your Solution
 
@@ -56,32 +72,44 @@ From now on, **all components will be created within this solution**. This ensur
 - ✅ Clean application lifecycle management
 - ✅ Simplified backup and version control
 
+![Solution Overview](../assets/01-1-3-solution-overview.png)
+
 ---
 
 ## Part 2: Create the Tables
 
-## Part 2: Create the Tables
 
 ### Step 4: Create the Trip Table
 
 1. You should now be **inside your Expense Tracker App solution**
 2. Click **+ New** → **Table** → **Table**
+
+![New Table Menu](../assets/01-2-4-new-table-menu.png)
+
 3. In the **New table** panel:
    - **Display name**: `Trip`
    - **Plural display name**: `Trips` (auto-populated)
    - **Name**: `[prefix]_Trip` (e.g., `lf_Trip` - note your initials prefix)
+
+![Table Creation Dialog](../assets/01-2-4-table-creation-dialog.png)
+
 4. Click **Save**
+
+![Table Designer Empty](../assets/01-2-4-table-designer-empty.png)
+
 5. You're now in the table designer. Add the following columns by clicking **+ New column**:
 
-| Column Name | Data Type | Required | Description |
-|-------------|-----------|----------|-------------|
-| Trip Name | Text | Yes | Name/description of the trip |
-| Destination | Text | Yes | Where the trip is going |
-| Start Date | Date Only | Yes | Trip start date |
-| End Date | Date Only | Yes | Trip end date |
-| Trip Purpose | Choice | No | Business, Training, Conference, etc. |
-| Estimated Budget | Currency | No | Planned budget for the trip |
-| Trip Status | Choice | Yes | Planning, In Progress, Completed, Cancelled |
+![Add Column Dialog](../assets/01-2-4-add-column-dialog.png)
+
+| Column Name      | Data Type | Required | Description                                 |
+| ---------------- | --------- | -------- | ------------------------------------------- |
+| Trip Name        | Text      | Yes      | Name/description of the trip                |
+| Destination      | Text      | Yes      | Where the trip is going                     |
+| Start Date       | Date Only | Yes      | Trip start date                             |
+| End Date         | Date Only | Yes      | Trip end date                               |
+| Trip Purpose     | Choice    | No       | Business, Training, Conference, etc.        |
+| Estimated Budget | Currency  | No       | Planned budget for the trip                 |
+| Trip Status      | Choice    | Yes      | Planning, In Progress, Completed, Cancelled |
 
 7. For **Trip Purpose**, add these choices:
    - Business Meeting
@@ -89,6 +117,8 @@ From now on, **all components will be created within this solution**. This ensur
    - Conference
    - Customer Visit
    - Other
+
+![Choice Field Config](../assets/01-2-4-choice-field-config.png)
 
 8. For **Trip Status**, add these choices:
    - Planning (Default)
@@ -98,9 +128,14 @@ From now on, **all components will be created within this solution**. This ensur
 
 9. Click **Save** (this saves the table to your solution)
 
+![Trip Table Complete](../assets/01-2-4-trip-table-complete.png)
+
 ### Step 5: Create the Expense Report Table
 
 1. From your solution, click **+ New** → **Table** → **Table**
+
+![Expense Report Creation](../assets/01-2-5-expense-report-creation.png)
+
 2. In the **New table** panel:
    - **Display name**: `Expense Report`
    - **Plural display name**: `Expense Reports` (auto-populated) 
@@ -108,16 +143,18 @@ From now on, **all components will be created within this solution**. This ensur
 3. Click **Save**
 4. Add the following columns by clicking **+ New column**:
 
-| Column Name | Data Type | Required | Description |
-|-------------|-----------|----------|-------------|
-| Expense Title | Text | Yes | Description of the expense |
-| Expense Date | Date Only | Yes | When the expense occurred |
-| Amount | Currency | Yes | Cost of the expense |
-| Expense Category | Choice | Yes | Meals, Transport, Accommodation, etc. |
-| Payment Method | Choice | Yes | Company Card, Personal, Cash |
-| Receipt Attached | Yes/No | No | Whether receipt is available |
-| Business Justification | Text | No | Why this expense was necessary |
-| Trip | Lookup | Yes | Related trip (we'll configure this) |
+![Expense Table Designer](../assets/01-2-5-expense-table-designer.png)
+
+| Column Name            | Data Type | Required | Description                           |
+| ---------------------- | --------- | -------- | ------------------------------------- |
+| Expense Title          | Text      | Yes      | Description of the expense            |
+| Expense Date           | Date Only | Yes      | When the expense occurred             |
+| Amount                 | Currency  | Yes      | Cost of the expense                   |
+| Expense Category       | Choice    | Yes      | Meals, Transport, Accommodation, etc. |
+| Payment Method         | Choice    | Yes      | Company Card, Personal, Cash          |
+| Receipt Attached       | Yes/No    | No       | Whether receipt is available          |
+| Business Justification | Text      | No       | Why this expense was necessary        |
+| Trip                   | Lookup    | Yes      | Related trip (we'll configure this)   |
 
 4. For **Expense Category**, add these choices:
    - Meals & Entertainment
@@ -134,6 +171,8 @@ From now on, **all components will be created within this solution**. This ensur
 
 6. **Don't save yet** - we need to add the lookup relationship first
 
+![Lookup Field Config](../assets/01-2-5-lookup-field-config.png)
+
 ---
 
 ## Part 3: Create the Relationship
@@ -146,8 +185,16 @@ From now on, **all components will be created within this solution**. This ensur
    - **Data type**: Lookup
    - **Related table**: Trip
    - **Required**: Yes
+
+![Lookup Configuration](../assets/01-3-6-lookup-configuration.png)
+
 4. Click **Save** to save the relationship
+
+![Relationship Created](../assets/01-3-6-relationship-created.png)
+
 5. Click **Save and exit** to finish the Expense Report table
+
+![Solution With Tables](../assets/01-3-6-solution-with-tables.png)
 
 ### Understanding the Relationship
 You've just created a **1:N (one-to-many)** relationship where:
