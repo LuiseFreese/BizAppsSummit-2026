@@ -51,9 +51,9 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ## Learning Exercises
 
 ### Part 1: Foundation Building & Data Platform Decisions
-- **Discussion**: [SharePoint Lists vs Dataverse - When to Use What](./exercises/01-sharepoint-vs-dataverse-discussion.md)
-- **Exercise 1**: [Understanding Dataverse Tables](./exercises/02-dataverse-tables.md)
-- **Exercise 2**: [Building Your First Model-Driven App](./exercises/03-model-driven-basics.md)
+- **Lecture**: [SharePoint Lists vs Dataverse - When to Use What](./lectures/01-sharepoint-vs-dataverse.md)
+- **Exercise 1**: [Understanding Dataverse Tables](./exercises/01-dataverse-tables.md)
+- **Exercise 2**: [Building Your First Model-Driven App](./exercises/02-model-driven-basics.md)
 
 ### Part 2: Custom Pages Development  
 - **Exercise 3**: [Creating Your First Custom Page](./exercises/03-custom-page-basics.md)
@@ -89,6 +89,7 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ```
 📁 BizAppsSummit-2026/
 ├── 📁 exercises/           # Step-by-step tutorial exercises
+├── 📁 lectures/            # Presentation materials and discussion guides
 ├── 📁 downloads/           # Reference apps and solutions  
 ├── 📁 templates/           # Reusable custom page templates
 ├── 📁 data/               # Sample data for exercises
