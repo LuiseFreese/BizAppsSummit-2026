@@ -126,7 +126,7 @@ From now on, **all components will be created within this solution**. This ensur
      - Customer Visit
      - Other
 
-![Global Choice Creation](images/01-2-4-global-choice-creation.png)
+![Trip Purpose Value](images/01-2-4-trip-purpose-values.png)
 
    **For Trip Status:**
    - When configuring the Trip Status column, select **Sync with global choice**
