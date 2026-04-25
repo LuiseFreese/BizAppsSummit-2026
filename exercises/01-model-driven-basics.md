@@ -102,14 +102,16 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
-| Column Name      | Data Type     | Format      | Business Required | Description                     |
-| ---------------- | ------------- | ----------- | ----------------- | ------------------------------- |
-| Destination      | Singe Line of Text          | Text        | Yes               | Where the trip is going         |
-| Start Date       | Date and time | Date only   | Yes               | Trip start date                 |
-| End Date         | Date and time | Date only   | Yes               | Trip end date                   |
-| Trip Purpose     | Choice        | N/A         | No                | Business, Training, etc.        |
-| Estimated Budget | Currency      | Currency    | No                | Planned budget for the trip     |
-| Trip Status      | Choice        | N/A         | Yes               | Planning, In Progress, etc.     |
+> 💡 **Important - Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
+
+| Column Name      | Data Type          | Format    | Business Required | Description                                           |
+| ---------------- | ------------------ | --------- | ----------------- | ----------------------------------------------------- |
+| Destination      | Single Line of Text | Text      | Yes               | City, country, or location where the trip is taking place |
+| Start Date       | Date and time      | Date only | Yes               | The date when the business trip begins                |
+| End Date         | Date and time      | Date only | Yes               | The date when the business trip ends                  |
+| Trip Purpose     | Choice             | N/A       | No                | The business reason for this trip (meeting, training, etc.) |
+| Estimated Budget | Currency           | Currency  | No                | Expected total cost for this trip including all expenses |
+| Trip Status      | Choice             | N/A       | Yes               | Current stage of trip planning and execution          |
 
 8. **Create Global Choice Sets**: Instead of creating local choices, we'll create global choice sets that can be reused across tables. This ensures consistency and easier maintenance.
 
@@ -145,6 +147,7 @@ From now on, **all components will be created within this solution**. This ensur
    - **Date fields**: Select "Date and time" data type, then choose "Date only" format
    - **Currency fields**: Will automatically use your environment's currency format
    - **Choice fields**: Always sync with global choices for reusability
+   - **Descriptions**: Write clear, user-friendly descriptions - they become tooltips in the app for better usability and accessibility compliance
 
 10. Select **Save** (this saves the table to your solution)
 
@@ -172,15 +175,17 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
-| Column Name            | Data Type     | Format      | Business Required | Description                     |
-| ---------------------- | ------------- | ----------- | ----------------- | ------------------------------- |
-| Expense Date           | Date and time | Date only   | Yes               | When the expense occurred       |
-| Amount                 | Currency      | Currency    | Yes               | Cost of the expense             |
-| Expense Category       | Choice        | N/A         | Yes               | Meals, Transport, etc.          |
-| Payment Method         | Choice        | N/A         | Yes               | Company Card, Personal, Cash    |
-| Receipt Attached       | Choice        | Yes/No      | No                | Whether receipt is available    |
-| Business Justification | Text          | Text area   | No                | Why this expense was necessary  |
-| Trip                   | Lookup        | N/A         | Yes               | Related trip (configure below)  |
+> 💡 **Remember**: Descriptions become tooltips for users - make them helpful and clear!
+
+| Column Name            | Data Type     | Format    | Business Required | Description                                                     |
+| ---------------------- | ------------- | --------- | ----------------- | --------------------------------------------------------------- |
+| Expense Date           | Date and time | Date only | Yes               | The date when this expense was incurred during the trip        |
+| Amount                 | Currency      | Currency  | Yes               | Total cost of this expense (in your local currency)            |
+| Expense Category       | Choice        | N/A       | Yes               | Type of business expense (meals, transport, accommodation, etc.) |
+| Payment Method         | Choice        | N/A       | Yes               | How this expense was paid (company card, personal, cash)       |
+| Receipt Attached       | Choice        | Yes/No    | No                | Indicates if you have a receipt or proof of purchase           |
+| Business Justification | Text          | Text area | No                | Explanation of why this expense was necessary for business      |
+| Trip                   | Lookup        | N/A       | Yes               | Select which trip this expense belongs to                       |
 
 6. **Create Global Choice Sets** for reusable options:
 

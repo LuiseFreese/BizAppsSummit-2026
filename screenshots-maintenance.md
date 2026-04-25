@@ -31,6 +31,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-primary-column-config** - Primary column configuration showing rename from "Name" to "Trip Name"
 - **01-2-4-table-designer-empty** - Empty table designer after creating Trip table with system Status column visible
 - **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
+- **01-2-4-column-description-tooltip** - Column configuration showing Description field filled with user-friendly text (emphasize this becomes tooltip)
 - **01-2-4-date-format-selection** - Date field configuration showing "Date and time" data type with "Date only" format selected
 - **01-2-4-text-format-selection** - Text field configuration showing "Text" data type with "Text" format selected
 - **01-2-4-global-choice-creation** - Choice field showing "Sync with global choice" option and "+ New choice" dialog
@@ -41,6 +42,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 ### Step 5: Create the Expense Report Table
 - **01-2-5-expense-report-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
 - **01-2-5-primary-column-config** - Primary column configuration showing rename from "Name" to "Expense Title"
+- **01-2-5-column-description-examples** - Column configuration showing meaningful Description field examples for expense fields
 - **01-2-5-expense-table-designer** - Expense Report table in designer with multiple columns showing data types and formats
 - **01-2-5-text-area-format** - Text field configuration showing "Text" data type with "Text area" format for Business Justification
 - **01-2-5-yesno-choice-format** - Choice field configuration showing Choice data type with "Yes/No" format for Receipt Attached
@@ -151,6 +153,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
   - Text fields: "Text" format (single line) vs "Text area" format (multi-line)
   - Date fields: "Date and time" data type → "Date only" format
   - Yes/No fields: "Choice" data type → "Yes/No" format (not standalone Yes/No data type)
+- **Column Descriptions**: Always show meaningful, user-friendly descriptions in screenshots since these become tooltips in the model-driven app for usability and accessibility
 
 ## Review Status
 - [ ] Screenshot list reviewed and approved
