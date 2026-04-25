@@ -35,8 +35,8 @@ We're building an expense tracking system where:
 ![New Publisher Dialog](../assets/01-1-1-new-publisher-dialog.png)
 
 6. Fill in the publisher details using **your initials**:
-   - **Display name**: `[Your Initials] BizApps Summit` (e.g., "LF BizApps Summit")
-   - **Name**: `[yourinitials]bizappssummit` (e.g., "lfbizappssummit" - this will auto-populate)
+   - **Display name**: `[Your Initials]` (e.g., "LF")
+   - **Name**: `[yourinitials]` (e.g., "lf" - this will auto-populate)
    - **Prefix**: `[your initials]` (e.g., "lf" - keep it short, 2-4 characters)
    - **Option value prefix**: `10000` (leave default or use provided number)
    - **Contact details**: Add your email
@@ -54,7 +54,7 @@ We're building an expense tracking system where:
 1. Now back in the **New solution** dialog:
    - **Display name**: `Expense Tracker App`
    - **Name**: `ExpenseTrackerApp` (auto-populated)
-   - **Publisher**: Select **[Your Initials] BizApps Summit** (the publisher you just created)
+   - **Publisher**: Select **[Your Initials]** (the publisher you just created)
    - **Version**: `1.0.0.0` (default)
    - **Description**: `Complete expense tracking solution for business trips`
 
