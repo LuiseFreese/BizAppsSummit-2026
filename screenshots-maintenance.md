@@ -53,23 +53,24 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 ### Step 6: Customize the Trip Main Form
 - **01-3-6-table-forms-tab** - Trip table with Forms tab selected showing available forms
 - **01-3-6-form-designer** - Form designer interface with callouts showing: 1) Table columns panel (left side) for familiarization with created fields, 2) Owner field highlighted for hiding, 3) Properties panel (right side) demonstrating that everything has configurable properties, 4) Layout switcher (lower left) showing responsive design options
+- **01-3-6-components-panel** - Components panel showing available component categories (Layout, Grid, Input, Media, AI) and the General section being converted to 2-column layout
 - **01-3-6-header-customization** - Form header section being customized with fields
 - **01-3-6-two-column-layout** - General section with two-column field layout
 - **01-3-6-add-subgrid** - Process of adding Related Expenses subgrid
 - **01-3-6-completed-trip-form** - Final Trip form with all customizations
 
-### Step 7: Customize the Trip Main View
+### Step 8: Customize the Trip Main View
 - **01-3-7-views-tab** - Trip table Views tab showing available views
 - **01-3-7-view-designer** - View designer showing column configuration
 - **01-3-7-view-columns-configured** - View with proper columns in correct order
 - **01-3-7-sort-configuration** - Sort settings configuration
 
-### Step 8: Customize the Expense Main Form
+### Step 9: Customize the Expense Main Form
 - **01-3-8-expense-form-designer** - Expense form in designer
 - **01-3-8-expense-form-layout** - Organized form with header and sections
 - **01-3-8-completed-expense-form** - Final customized Expense form
 
-### Step 9: Customize the Expense Main View  
+### Step 10: Customize the Expense Main View  
 - **01-3-9-expense-view-designer** - Expense view designer
 - **01-3-9-expense-view-columns** - Expense view with configured columns including `Trip Reference` lookup
 - **01-3-9-completed-expense-view** - Final Expense view
@@ -78,7 +79,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 ## Part 4: Create the Model-Driven App
 
-### Step 10: Build the App
+### Step 11: Build the App
 - **01-4-10-new-app-menu** - Solution "+ New" menu with "App" > "Model-driven app" highlighted
 - **01-4-10-app-creation-dialog** - New model-driven app creation dialog
 - **01-4-10-modern-app-designer** - Modern app designer interface (empty state)
@@ -89,7 +90,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-4-10-navigation-configured** - Navigation panel showing organized menu structure
 - **01-4-10-app-save-publish** - Save and Publish buttons in app designer
 
-### Step 11: Test Your App
+### Step 12: Test Your App
 - **01-4-11-play-button** - "Play" button to launch the app
 - **01-4-11-running-app** - Live app showing navigation and main interface
 - **01-4-11-trips-list-view** - Trips list view with sample data
