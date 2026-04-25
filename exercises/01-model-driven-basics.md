@@ -88,13 +88,20 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Table Designer Empty](images/01-2-4-table-designer-empty.png)
 
-5. You're now in the table designer. Add the following columns by selecting **+ New column**:
+5. **Configure the Primary Column**: Before adding custom columns, let's make the primary column more descriptive:
+   - In the table designer, locate the **Name** column (this is the primary column)
+   - Select the **Name** column to edit its properties
+   - Change the **Display name** from "Name" to `Trip Name`
+   - This makes it clearer what this field represents
+
+![Primary Column Config](images/01-2-4-primary-column-config.png)
+
+6. You're now in the table designer. Add the following columns by selecting **+ New column**:
 
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
 | Column Name      | Data Type | Required | Description                                 |
 | ---------------- | --------- | -------- | ------------------------------------------- |
-| Trip Name        | Text      | Yes      | Name/description of the trip                |
 | Destination      | Text      | Yes      | Where the trip is going                     |
 | Start Date       | Date Only | Yes      | Trip start date                             |
 | End Date         | Date Only | Yes      | Trip end date                               |
@@ -132,13 +139,19 @@ From now on, **all components will be created within this solution**. This ensur
    - **Plural display name**: `Expense Reports` (auto-populated) 
    - **Name**: `[prefix]_ExpenseReport` (e.g., `lf_ExpenseReport` - note your prefix)
 3. Select **Save**
-4. Add the following columns by selecting **+ New column**:
+
+4. **Configure the Primary Column**: Similar to the Trip table, let's make the primary column more descriptive:
+   - In the table designer, locate the **Name** column (this is the primary column)
+   - Select the **Name** column to edit its properties  
+   - Change the **Display name** from "Name" to `Expense Title`
+   - This makes it clear this field describes the expense
+
+5. Add the following columns by selecting **+ New column**:
 
 ![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
 | Column Name            | Data Type | Required | Description                           |
 | ---------------------- | --------- | -------- | ------------------------------------- |
-| Expense Title          | Text      | Yes      | Description of the expense            |
 | Expense Date           | Date Only | Yes      | When the expense occurred             |
 | Amount                 | Currency  | Yes      | Cost of the expense                   |
 | Expense Category       | Choice    | Yes      | Meals, Transport, Accommodation, etc. |
@@ -147,7 +160,7 @@ From now on, **all components will be created within this solution**. This ensur
 | Business Justification | Text      | No       | Why this expense was necessary        |
 | Trip                   | Lookup    | Yes      | Related trip (we'll configure this)   |
 
-4. For **Expense Category**, add these choices:
+6. For **Expense Category**, add these choices:
    - Meals & Entertainment
    - Transportation
    - Accommodation
@@ -155,12 +168,12 @@ From now on, **all components will be created within this solution**. This ensur
    - Parking
    - Other
 
-5. For **Payment Method**, add these choices:
+7. For **Payment Method**, add these choices:
    - Company Credit Card
    - Personal Reimbursement
    - Cash Advance
 
-6. **Don't save yet** - we need to add the lookup relationship first
+8. **Don't save yet** - we need to add the lookup relationship first
 
 ![Lookup Field Config](images/01-2-5-lookup-field-config.png)
 
