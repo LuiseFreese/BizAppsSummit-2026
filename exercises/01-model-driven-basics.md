@@ -247,19 +247,28 @@ Your table should now look like this:
 
 ![Form Designer](images/01-3-6-form-designer.png)
 
-4. Customize the form layout:
+4. **Explore the Form Designer Interface** (take a moment to understand the environment):
+   - **Left Panel**: Look at the **Table columns** panel to see all the fields you created earlier - these are ready to drag onto your form
+   - **Center**: Select the **Owner** field and notice it has properties - practice hiding it by unchecking **Visible** in the properties panel
+   - **Right Panel**: Explore the **Properties** panel - everything in Power Platform has configurable properties
+   - **Lower Left**: Find the **Layout switcher** - notice your form is already responsive and can switch between desktop and mobile layouts
+
+> [!TIP]
+> **Interface Discovery**: This exploration helps you understand that model-driven apps are built through property-based configuration rather than code. Every element can be customized through the properties panel, and responsive design is built-in.
+
+5. **Customize the form layout**:
    - **Header section**: Add `Trip Name` and `Trip Status`
    - **General section**: Organize fields in two columns:
      - Left column: `Destination`, `Start Date`, `Trip Purpose`  
      - Right column: `Estimated Budget`, `End Date`
    - Add a new **Details** section below with: `Business Justification` (if you added this field)
 
-5. **Add a Related Records subgrid**:
+6. **Add a Related Records subgrid**:
    - From the **Table columns** panel, drag **Related** → **Expenses** onto the form
    - This will show all expenses related to this trip
    - Position it at the bottom of the form
 
-6. Select **Save and publish**
+7. Select **Save and publish**
 
 ### Step 7: Customize the Trip Main View
 
