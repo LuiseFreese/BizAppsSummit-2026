@@ -36,92 +36,79 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 - **01-2-4-sync-with-global-choice** - Choice column configuration showing how to sync with the newly created global choice by typing the choice name into the "Sync this choice with" field in the new column dialog
 - **01-2-4-trip-purpose-values** - Creating "Trip Purpose Values" global choice set with all options
-
 - **01-2-4-trip-table-complete** - Trip table with all columns added, showing detailed data types and formats
 
-### Step 5: Create the Expense Report Table
-- **01-2-5-expense-report-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
+### Step 5: Create the Expense Table
+- **01-2-5-expense-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
 - **01-2-5-primary-column-config** - Primary column configuration showing rename from "Name" to "Expense Title"
+- **01-2-5-expense-table-designer** - Expense table in designer with multiple columns showing data types and formats
 
-- **01-2-5-expense-table-designer** - Expense Report table in designer with multiple columns showing data types and formats
-- **01-2-5-text-area-format** - Text field configuration showing "Text" data type with "Text area" format for Business Justification
-- **01-2-5-yesno-choice-format** - Choice field configuration showing Choice data type with "Yes/No" format for Receipt Attached
-- **01-2-5-expense-category-choice** - Creating "Expense Category Values" global choice set
-- **01-2-5-payment-method-choice** - Creating "Payment Method Values" global choice set
-- **01-2-5-lookup-field-config** - Trip lookup field configuration showing related table selection
+- **01-2-5-lookup-field-config** - Trip Reference lookup field configuration showing related table selection
+- **01-2-5-solution-with-tables** - Solution overview showing both tables created after saving
 
 ---
 
-## Part 3: Create the Relationship
+## Part 3: Customize Forms and Views
 
-### Step 6: Add the Trip Lookup to Expense Report
-- **01-3-6-lookup-configuration** - Lookup field properties panel showing relationship settings
-- **01-3-6-relationship-created** - Confirmation of relationship creation or tables view showing relationship
-- **01-3-6-solution-with-tables** - Solution overview showing both tables created
+### Step 6: Customize the Trip Main Form
+- **01-3-6-table-forms-tab** - Trip table with Forms tab selected showing available forms
+- **01-3-6-form-designer** - Form designer showing Trip form layout
+- **01-3-6-header-customization** - Form header section being customized with fields
+- **01-3-6-two-column-layout** - General section with two-column field layout
+- **01-3-6-add-subgrid** - Process of adding Related Expenses subgrid
+- **01-3-6-completed-trip-form** - Final Trip form with all customizations
 
----
+### Step 7: Customize the Trip Main View
+- **01-3-7-views-tab** - Trip table Views tab showing available views
+- **01-3-7-view-designer** - View designer showing column configuration
+- **01-3-7-view-columns-configured** - View with proper columns in correct order
+- **01-3-7-sort-configuration** - Sort settings configuration
 
-## Part 4: Customize Forms and Views
+### Step 8: Customize the Expense Main Form
+- **01-3-8-expense-form-designer** - Expense form in designer
+- **01-3-8-expense-form-layout** - Organized form with header and sections
+- **01-3-8-completed-expense-form** - Final customized Expense form
 
-### Step 7: Customize the Trip Main Form
-- **01-4-7-table-forms-tab** - Trip table with Forms tab selected showing available forms
-- **01-4-7-form-designer** - Form designer showing Trip form layout
-- **01-4-7-header-customization** - Form header section being customized with fields
-- **01-4-7-two-column-layout** - General section with two-column field layout
-- **01-4-7-add-subgrid** - Process of adding Related Expense Reports subgrid
-- **01-4-7-completed-trip-form** - Final Trip form with all customizations
-
-### Step 8: Customize the Trip Main View
-- **01-4-8-views-tab** - Trip table Views tab showing available views
-- **01-4-8-view-designer** - View designer showing column configuration
-- **01-4-8-view-columns-configured** - View with proper columns in correct order
-- **01-4-8-sort-configuration** - Sort settings configuration
-
-### Step 9: Customize the Expense Report Main Form
-- **01-4-9-expense-form-designer** - Expense Report form in designer
-- **01-4-9-expense-form-layout** - Organized form with header and sections
-- **01-4-9-completed-expense-form** - Final customized Expense Report form
-
-### Step 10: Customize the Expense Report Main View  
-- **01-4-10-expense-view-designer** - Expense Report view designer
-- **01-4-10-expense-view-columns** - Expense view with configured columns including Trip lookup
-- **01-4-10-completed-expense-view** - Final Expense Report view
+### Step 9: Customize the Expense Main View  
+- **01-3-9-expense-view-designer** - Expense view designer
+- **01-3-9-expense-view-columns** - Expense view with configured columns including Trip Reference lookup
+- **01-3-9-completed-expense-view** - Final Expense view
 
 ---
 
-## Part 5: Create the Model-Driven App
+## Part 4: Create the Model-Driven App
 
-### Step 11: Build the App
-- **01-5-11-new-app-menu** - Solution "+ New" menu with "App" > "Model-driven app" highlighted
-- **01-5-11-app-creation-dialog** - New model-driven app creation dialog
-- **01-5-11-modern-app-designer** - Modern app designer interface (empty state)
-- **01-5-11-add-page-menu** - "+ Add page" menu with "Table based view and form" option
-- **01-5-11-table-selection** - Table selection dialog showing prefixed table names
-- **01-5-11-trip-pages-added** - App designer with Trip pages added
-- **01-5-11-expense-pages-added** - App designer with both Trip and Expense Report pages
-- **01-5-11-navigation-configured** - Navigation panel showing organized menu structure
-- **01-5-11-app-save-publish** - Save and Publish buttons in app designer
+### Step 10: Build the App
+- **01-4-10-new-app-menu** - Solution "+ New" menu with "App" > "Model-driven app" highlighted
+- **01-4-10-app-creation-dialog** - New model-driven app creation dialog
+- **01-4-10-modern-app-designer** - Modern app designer interface (empty state)
+- **01-4-10-add-page-menu** - "+ Add page" menu with "Table based view and form" option
+- **01-4-10-table-selection** - Table selection dialog showing prefixed table names
+- **01-4-10-trip-pages-added** - App designer with Trip pages added
+- **01-4-10-expense-pages-added** - App designer with both Trip and Expense pages
+- **01-4-10-navigation-configured** - Navigation panel showing organized menu structure
+- **01-4-10-app-save-publish** - Save and Publish buttons in app designer
 
-### Step 12: Test Your App
-- **01-5-12-play-button** - "Play" button to launch the app
-- **01-5-12-running-app** - Live app showing navigation and main interface
-- **01-5-12-trips-list-view** - Trips list view with sample data
-- **01-5-12-new-trip-button** - "+ New" button in command bar highlighted
-- **01-5-12-trip-form-create** - New trip creation form
-- **01-5-12-trip-detail-view** - Trip detail form showing related expense reports subgrid
-- **01-5-12-new-expense-from-subgrid** - Creating new expense from subgrid with Trip auto-populated
-- **01-5-12-expense-form-filled** - Completed expense report form
-- **01-5-12-relationship-navigation** - Showing relationship between trips and expenses in action
+### Step 11: Test Your App
+- **01-4-11-play-button** - "Play" button to launch the app
+- **01-4-11-running-app** - Live app showing navigation and main interface
+- **01-4-11-trips-list-view** - Trips list view with sample data
+- **01-4-11-new-trip-button** - "+ New" button in command bar highlighted
+- **01-4-11-trip-form-create** - New trip creation form
+- **01-4-11-trip-detail-view** - Trip detail form showing related expenses subgrid
+- **01-4-11-new-expense-from-subgrid** - Creating new expense from subgrid with Trip auto-populated
+- **01-4-11-expense-form-filled** - Completed expense form
+- **01-4-11-relationship-navigation** - Showing relationship between trips and expenses in action
 
 ---
 
-## Part 6: Understanding What You Built
+## Part 5: Understanding What You Built
 
 ### Visual Summary Screenshots
-- **01-6-final-solution-components** - Solution showing all created components (tables, app)
-- **01-6-final-app-navigation** - Complete app with both navigation items working
-- **01-6-crud-operations-demo** - Montage showing Create, Read, Update, Delete operations
-- **01-6-relationship-demonstration** - Visual showing one Trip with multiple Expense Reports
+- **01-5-final-solution-components** - Solution showing all created components (tables, app)
+- **01-5-final-app-navigation** - Complete app with both navigation items working
+- **01-5-crud-operations-demo** - Montage showing Create, Read, Update, Delete operations
+- **01-5-relationship-demonstration** - Visual showing one Trip with multiple Expenses
 
 ---
 

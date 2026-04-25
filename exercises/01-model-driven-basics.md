@@ -5,7 +5,7 @@ In this exercise, you'll build a complete **Expenses Tracker** model-driven app 
 
 ## Scenario
 We're building an expense tracking system where:
-- **Trips** contain multiple **Expense Reports** 
+- **Trips** contain multiple **Expenses** 
 - Each trip can have several invoices/expenses that need to be tracked and approved
 - Users can easily manage all their travel expenses in one organized system
 
@@ -103,7 +103,7 @@ From now on, **all components will be created within this solution**. This ensur
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
 > [!TIP]
-> **Important - Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
+> **Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
 
 | Column Name      | Data Type           | Format    | Business Required | Description                                                 |
 | ---------------- | ------------------- | --------- | ----------------- | ----------------------------------------------------------- |
@@ -150,20 +150,20 @@ From now on, **all components will be created within this solution**. This ensur
 > - **Choice fields**: Always sync with global choices for reusability
 > - **Descriptions**: Write clear, user-friendly descriptions - they become tooltips in the app for better usability and accessibility compliance
 
-9. Select **Save** (this saves the table to your solution)
+Your table should now look like this:
 
 ![Trip Table Complete](images/01-2-4-trip-table-complete.png)
 
-### Step 5: Create the Expense Report Table
+### Step 5: Create the Expense Table
 
 1. From your solution, select **+ New** → **Table** → **Table (advanced properties)**
 
-![Expense Report Creation](images/01-2-5-expense-report-creation.png)
+![Expense Creation](images/01-2-5-expense-creation.png)
 
 2. In the **New table** panel:
-   - **Display name**: `Expense Report`
-   - **Plural display name**: `Expense Reports` (auto-populated) 
-   - **Name**: `[prefix]_ExpenseReport` (e.g., `lf_ExpenseReport` - note your prefix)
+   - **Display name**: `Expense`
+   - **Plural display name**: `Expenses` (auto-populated) 
+   - **Name**: `[prefix]_Expense` (e.g., `lf_Expense` - note your prefix)
 3. Select **Save**
 
 4. **Configure the Primary Column**: Similar to the Trip table, let's make the primary column more descriptive:
@@ -179,15 +179,15 @@ From now on, **all components will be created within this solution**. This ensur
 > [!TIP]
 > **Remember**: Descriptions become tooltips for users - make them helpful and clear!
 
-| Column Name            | Data Type     | Format    | Business Required | Description                                                      |
-| ---------------------- | ------------- | --------- | ----------------- | ---------------------------------------------------------------- |
-| Expense Date           | Date and time | Date only | Yes               | The date when this expense was incurred during the trip          |
-| Amount                 | Currency      | Currency  | Yes               | Total cost of this expense (in your local currency)              |
-| Expense Category       | Choice        | N/A       | Yes               | Type of business expense (meals, transport, accommodation, etc.) |
-| Payment Method         | Choice        | N/A       | Yes               | How this expense was paid (company card, personal, cash)         |
-| Receipt Attached       | Choice        | Yes/No    | No                | Indicates if you have a receipt or proof of purchase             |
-| Business Justification | Text          | Text area | No                | Explanation of why this expense was necessary for business       |
-| Trip                   | Lookup        | N/A       | Yes               | Select which trip this expense belongs to                        |
+| Column Name            | Data Type     | Format                 | Business Required | Description                                                |
+| ---------------------- | ------------- | ---------------------- | ----------------- | ---------------------------------------------------------- |
+| Expense Date           | Date and time | Date only              | Yes               | The date when this expense was incurred during the trip    |
+| Amount                 | Currency      | Currency               | Yes               | Total cost of this expense (in your local currency)        |
+| Expense Category       | Choice        | N/A                    | Yes               | Type of business expense                                   |
+| Payment Method         | Choice        | N/A                    | Yes               | How this expense was paid                                  |
+| Receipt Attached       | Yes/No        | Yes/No                 | No                | Indicates if you have a receipt or proof of purchase       |
+| Business Justification | Text          | Multiple lines of text | No                | Explanation of why this expense was necessary for business |
+| Trip Reference         | Lookup        | N/A                    | Yes               | Select which trip this expense belongs to                  |
 
 6. **Create Global Choice Sets** for reusable options:
 
@@ -203,8 +203,6 @@ From now on, **all components will be created within this solution**. This ensur
      - Parking
      - Other
 
-![Expense Category Choice](images/01-2-5-expense-category-choice.png)
-
    **For Payment Method:**
    - When configuring the Payment Method column, select **Sync with global choice**
    - Select **+ New choice** to create a new global choice set
@@ -214,55 +212,33 @@ From now on, **all components will be created within this solution**. This ensur
      - Personal Reimbursement
      - Cash Advance
 
-![Payment Method Choice](images/01-2-5-payment-method-choice.png)
-
 > [!TIP]
 > **Global Choice Reuse**: Notice how we're building a library of reusable choice sets. In future exercises, we might reuse these same choice sets or create new ones following the "Values" naming convention.
 
-7. **Important Format Notes**:
-   - **Receipt Attached**: Use Choice data type with "Yes/No" format (not the standalone Yes/No data type). This approach is more flexible and consistent with other choice fields.
-   - **Business Justification**: Use Text data type with "Text area" format for multi-line input
-   - **Date fields**: Always select "Date and time" data type, then choose "Date only" format
-   - **Currency fields**: Will automatically use your environment's currency settings
+7. **Don't save yet** - we need to add the lookup relationship first
 
-8. **Don't save yet** - we need to add the lookup relationship first
+8. **Configure the lookup relationship** - we need to add the Trip Reference field:
+   - Find the **Trip Reference** column in your table designer
+   - Select the **Trip Reference** column to configure it
+   - Set the following properties:
+     - **Data type**: Lookup
+     - **Related table**: Trip
+     - **Required**: Yes
 
 ![Lookup Field Config](images/01-2-5-lookup-field-config.png)
 
----
+> [!IMPORTANT]
+> **Automatic Relationship Creation**: When you create a lookup column in Dataverse, it automatically creates the 1:N relationship for you! You don't need separate steps to "create the relationship" - the lookup column IS the relationship. This creates a one-to-many relationship where one Trip can have many Expenses.
 
-## Part 3: Create the Relationship
-
-### Step 6: Add the Trip Lookup to Expense Report
-
-1. While still in the Expense Report table editor, find the **Trip** column
-2. Select the **Trip** column to configure it
-3. Set the following properties:
-   - **Data type**: Lookup
-   - **Related table**: Trip
-   - **Required**: Yes
-
-![Lookup Configuration](images/01-3-6-lookup-configuration.png)
-
-4. Select **Save** to save the relationship
-
-![Relationship Created](images/01-3-6-relationship-created.png)
-
-5. Select **Save and exit** to finish the Expense Report table
+9. Select **Save and exit** to finish the Expense table
 
 ![Solution With Tables](images/01-3-6-solution-with-tables.png)
 
-### Understanding the Relationship
-You've just created a **1:N (one-to-many)** relationship where:
-- One Trip can have many Expense Reports
-- Each Expense Report belongs to exactly one Trip
-- This is accomplished through a lookup column on the Expense Report table
-
 ---
 
-## Part 4: Customize Forms and Views
+## Part 3: Customize Forms and Views
 
-### Step 7: Customize the Trip Main Form
+### Step 6: Customize the Trip Main Form
 
 1. Go back to **Tables** and select your **Trip** table
 2. Select **Forms** tab
@@ -275,13 +251,13 @@ You've just created a **1:N (one-to-many)** relationship where:
    - Add a new **Details** section below with: Business Justification (if you added this field)
 
 5. **Add a Related Records subgrid**:
-   - From the **Table columns** panel, drag **Related** → **Expense Reports** onto the form
-   - This will show all expense reports related to this trip
+   - From the **Table columns** panel, drag **Related** → **Expenses** onto the form
+   - This will show all expenses related to this trip
    - Position it at the bottom of the form
 
 6. Select **Save and publish**
 
-### Step 8: Customize the Trip Main View
+### Step 7: Customize the Trip Main View
 
 1. Still in the Trip table, select **Views** tab
 2. Find the **Active Trips** view and select to edit it
@@ -296,26 +272,26 @@ You've just created a **1:N (one-to-many)** relationship where:
 4. Set **Sort by**: Start Date (Descending) so newest trips appear first
 5. Select **Save and publish**
 
-### Step 9: Customize the Expense Report Main Form
+### Step 8: Customize the Expense Main Form
 
-1. Navigate to your **Expense Report** table
+1. Navigate to your **Expense** table
 2. Select **Forms** tab → edit the **Information** form
 3. Organize the form:
    - **Header**: Expense Title and Amount
    - **General section**:
-     - Left column: Trip, Expense Date, Expense Category
+     - Left column: Trip Reference, Expense Date, Expense Category
      - Right column: Payment Method, Receipt Attached
    - **Details section**: Business Justification
 
 4. Select **Save and publish**
 
-### Step 10: Customize the Expense Report Main View  
+### Step 9: Customize the Expense Main View  
 
-1. In Expense Report table, select **Views** tab
-2. Edit the **Active Expense Reports** view
+1. In Expense table, select **Views** tab
+2. Edit the **Active Expenses** view
 3. Configure columns:
    - Expense Title
-   - Trip (this will show the related trip name)
+   - Trip Reference (this will show the related trip name)
    - Expense Date
    - Amount
    - Expense Category
@@ -326,9 +302,9 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ---
 
-## Part 5: Create the Model-Driven App
+## Part 4: Create the Model-Driven App
 
-### Step 11: Build the App
+### Step 10: Build the App
 
 1. From within your **Expense Tracker App solution**, select **+ New** → **App** → **Model-driven app**
 2. In the app designer:
@@ -342,22 +318,22 @@ You've just created a **1:N (one-to-many)** relationship where:
    - This automatically adds both the view and form pages for trips
    - Select **Add**
 
-5. Repeat for Expense Reports:
+5. Repeat for Expenses:
    - Select **+ Add page** → **Table based view and form** 
-   - Select **Expense Report** table (it will show with your prefix, e.g., `lf_ExpenseReport`)
+   - Select **Expense** table (it will show with your prefix, e.g., `lf_Expense`)
    - Select **Add**
 
 6. **Organize Navigation**:
    - In the navigation area, arrange items:
      - Trips (first)
-     - Expense Reports (second)
+     - Expenses (second)
 
 7. Select **Save** then **Publish**
 
 > [!TIP]
 > **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
 
-### Step 12: Test Your App
+### Step 11: Test Your App
 
 1. Select **Play** to launch your app
 2. **Test the built-in CRUD operations**:
@@ -370,7 +346,7 @@ You've just created a **1:N (one-to-many)** relationship where:
    **Read**: 
    - View the trip in the list
    - Select a trip to open the detailed form
-   - Notice the Related Expense Reports section
+   - Notice the Related Expenses section
    
    **Update**: 
    - Edit any field in the trip
@@ -382,14 +358,14 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 3. **Test the Relationship**:
    - Open a trip record
-   - In the **Expense Reports** subgrid, select **+ New Expense Report**
-   - Notice the Trip field is automatically populated
+   - In the **Expenses** subgrid, select **+ New Expense**
+   - Notice the Trip Reference field is automatically populated
    - Fill out the expense details and save
-   - See how it appears in both the subgrid and the Expense Reports main area
+   - See how it appears in both the subgrid and the Expenses main area
 
 ---
 
-## Part 6: Understanding What You Built
+## Part 5: Understanding What You Built
 
 ### Built-in Features You Get "For Free"
 

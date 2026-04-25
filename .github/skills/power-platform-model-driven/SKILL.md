@@ -77,7 +77,7 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 | Dates only | Date and time | Date only | **Two-step process: type → format** |
 | Currency amounts | Currency | Currency | Uses environment currency |
 | Dropdown lists | Choice | N/A | Always sync with global choices |
-| True/False | Choice | Yes/No | **Not standalone Yes/No type** |
+| True/False | Yes/No | Yes/No | **Preferred for boolean scenarios** |
 | Related records | Lookup | N/A | Creates relationships |
 
 **System vs Business Status Understanding:**
@@ -120,10 +120,12 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 ### 5. Relationship Design
 
 **1:N (One-to-Many) Relationships:**
-- Implemented via Lookup column on "many" side
-- Example: Trip (1) → Expense Reports (N)
-- Lookup field on Expense Report table pointing to Trip
+- **Automatic creation**: Lookup columns automatically create the relationship - no separate steps needed
+- Example: Trip (1) → Expenses (N)
+- **Lookup Naming Convention**: Always append "Reference" to table name (e.g., "Trip Reference")
+- Lookup field "Trip Reference" on Expense table pointing to Trip table
 - Always mark lookup as "Required" for data integrity
+- **Important**: In modern Dataverse, creating the lookup IS creating the relationship
 
 **Relationship Navigation:**
 - Creates automatic subgrids on parent records
@@ -172,7 +174,7 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 
 **Navigation Organization:**
 - Primary entities first (e.g., Trips)
-- Related entities second (e.g., Expense Reports)
+- Related entities second (e.g., Expenses)
 - Reference data last (e.g., Categories, Locations)
 
 ### 9. Built-in Features Leverage
@@ -276,7 +278,7 @@ For lookup/dropdown values (categories, types, etc.):
 
 **Naming Convention Standard:**
 - Format: `01-<part>-<step>-<descriptive-title>`
-- Examples: `01-2-4-trip-purpose-values`, `01-3-6-lookup-configuration`
+- Examples: `01-2-4-trip-purpose-values`, `01-2-5-lookup-field-config`
 - Use kebab-case (lowercase with hyphens)
 - Keep titles descriptive but concise
 
