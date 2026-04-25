@@ -102,7 +102,8 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
-> 💡 **Important - Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
+> [!TIP]
+> **Important - Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
 
 | Column Name      | Data Type           | Format    | Business Required | Description                                                 |
 | ---------------- | ------------------- | --------- | ----------------- | ----------------------------------------------------------- |
@@ -138,9 +139,11 @@ From now on, **all components will be created within this solution**. This ensur
      - Completed
      - Cancelled
 
-> 💡 **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
+> [!TIP]
+> **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
 
-> ✅ **Data Types and Formats Best Practices**: Configure these carefully for optimal user experience:
+> [!IMPORTANT]
+> **Data Types and Formats Best Practices**: Configure these carefully for optimal user experience:
 > - **Text fields**: Use "Text" format (not "Text area" unless you need multiple lines)
 > - **Date fields**: Select "Date and time" data type, then choose "Date only" format  
 > - **Currency fields**: Will automatically use your environment's currency format
@@ -173,7 +176,8 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
-> 💡 **Remember**: Descriptions become tooltips for users - make them helpful and clear!
+> [!TIP]
+> **Remember**: Descriptions become tooltips for users - make them helpful and clear!
 
 | Column Name            | Data Type     | Format    | Business Required | Description                                                      |
 | ---------------------- | ------------- | --------- | ----------------- | ---------------------------------------------------------------- |
@@ -212,7 +216,8 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Payment Method Choice](images/01-2-5-payment-method-choice.png)
 
-> 💡 **Global Choice Reuse**: Notice how we're building a library of reusable choice sets. In future exercises, we might reuse these same choice sets or create new ones following the "Values" naming convention.
+> [!TIP]
+> **Global Choice Reuse**: Notice how we're building a library of reusable choice sets. In future exercises, we might reuse these same choice sets or create new ones following the "Values" naming convention.
 
 7. **Important Format Notes**:
    - **Receipt Attached**: Use Choice data type with "Yes/No" format (not the standalone Yes/No data type). This approach is more flexible and consistent with other choice fields.
@@ -349,7 +354,8 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 7. Select **Save** then **Publish**
 
-> 💡 **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
+> [!TIP]
+> **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
 
 ### Step 12: Test Your App
 
@@ -415,7 +421,8 @@ While most standard operations are built-in, you might add custom buttons for:
 - Integration with external systems
 - Custom calculations or reports
 
-> 💡 **Pro Tip**: The component library approach mentioned in the overview is the easiest way to add custom command bar buttons, but for most business apps, the standard commands are sufficient.
+> [!TIP]
+> **Pro Tip**: The component library approach mentioned in the overview is the easiest way to add custom command bar buttons, but for most business apps, the standard commands are sufficient.
 
 ---
 
@@ -461,3 +468,4 @@ If you finish early, try these enhancements:
 - Try publishing the app again
 
 **Need Help?** Raise your hand - we're here to help! 🙋‍♀️🙋‍♂️
+

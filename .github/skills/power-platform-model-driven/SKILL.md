@@ -317,8 +317,12 @@ For lookup/dropdown values (categories, types, etc.):
 **Documentation Formatting Standards:**
 - **Sequential Steps**: Numbered procedures for actions
 - **💡 Tips**: Blue callouts for insights and explanations  
-- **✅ Best Practices**: Green callouts for guidance and standards
-- **❌ Anti-patterns**: Red callouts for what to avoid
+- **GitHub Alerts**: Use proper syntax for callouts:
+  - `> [!NOTE]` for general information
+  - `> [!TIP]` for best practices and guidance
+  - `> [!IMPORTANT]` for critical information
+  - `> [!WARNING]` for cautions and potential issues
+  - `> [!CAUTION]` for dangerous actions or anti-patterns
 - **> Quotes**: For important context or background information
 
 ### Advanced Form Layout Patterns
