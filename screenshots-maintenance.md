@@ -31,7 +31,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-primary-column-config** - Primary column configuration showing rename from "Name" to "Trip Name"
 - **01-2-4-table-designer-empty** - Empty table designer after creating Trip table with system Status column visible
 - **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
-- **01-2-4-column-description-tooltip** - Column configuration showing Description field filled with user-friendly text (emphasize this becomes tooltip)
+
 - **01-2-4-global-choice-creation** - Choice field showing "Sync with global choice" option and "+ New choice" dialog
 - **01-2-4-trip-purpose-values** - Creating "Trip Purpose Values" global choice set with all options
 - **01-2-4-trip-status-choice** - Creating "Trip Status Values" global choice set with status options
