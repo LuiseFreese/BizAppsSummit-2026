@@ -32,8 +32,8 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 - **01-2-4-table-designer-empty** - Empty table designer after creating Trip table with system Status column visible
 - **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
 
-- **01-2-4-global-choice-creation** - Choice field showing "Sync with global choice" option and "+ New choice" dialog
-- **01-2-4-create-global-choice** - Creating the actual global choice set with name and values configuration
+- **01-2-4-trip-purpose-value** - Creating the Trip Purpose Values global choice set with name and values configuration
+
 - **01-2-4-sync-with-global-choice** - Choice column configuration showing how to sync with the newly created global choice by typing the choice name into the "Sync this choice with" field in the new column dialog
 - **01-2-4-trip-purpose-values** - Creating "Trip Purpose Values" global choice set with all options
 
