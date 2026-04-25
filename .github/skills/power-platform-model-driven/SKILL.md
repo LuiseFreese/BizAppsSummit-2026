@@ -65,7 +65,7 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 
 **Primary Column Configuration:**
 - Rename from generic "Name" to meaningful field name
-- Examples: "Trip Name", "Expense Title", "Project Name"
+- Examples: `Trip Name`, `Expense Title`, `Project Name`
 - This becomes the primary identifier users see
 
 **Data Type Selection Best Practices:**
@@ -82,7 +82,7 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 
 **System vs Business Status Understanding:**
 - Every table has automatic "Status" column (Active/Inactive)
-- Create separate business status fields (e.g., "Trip Status", "Project Status")
+- Create separate business status fields (e.g., `Trip Status`, `Project Status`)
 - Differentiate system state from business workflow state
 
 ### 3. Global Choice Sets Strategy
@@ -122,8 +122,8 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 **1:N (One-to-Many) Relationships:**
 - **Automatic creation**: Lookup columns automatically create the relationship - no separate steps needed
 - Example: Trip (1) → Expenses (N)
-- **Lookup Naming Convention**: Always append "Reference" to table name (e.g., "Trip Reference")
-- Lookup field "Trip Reference" on Expense table pointing to Trip table
+- **Lookup Naming Convention**: Always append "Reference" to table name (e.g., `Trip Reference`)
+- Lookup field `Trip Reference` on Expense table pointing to Trip table
 - Always mark lookup as "Required" for data integrity
 - **Important**: In modern Dataverse, creating the lookup IS creating the relationship
 
@@ -135,8 +135,8 @@ argument-hint: 'Describe your model-driven app requirements (tables, relationshi
 ### 6. Form Customization Standards
 
 **Header Section:**
-- Primary identifier field (Trip Name, Expense Title)
-- Key status field (Trip Status, Approval Status)
+- Primary identifier field (`Trip Name`, `Expense Title`)
+- Key status field (`Trip Status`, `Approval Status`)
 - Keep header minimal and impactful
 
 **General Section Layout:**
@@ -330,7 +330,7 @@ For lookup/dropdown values (categories, types, etc.):
 ### Advanced Form Layout Patterns
 
 **Header Section Strategy:**
-- Primary identifier field (Trip Name, Project Title)
+- Primary identifier field (`Trip Name`, `Project Title`)
 - Key status indicator (business workflow status)
 - Maximum 2-3 fields to avoid clutter
 - Strategic placement for quick recognition

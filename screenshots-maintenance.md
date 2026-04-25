@@ -28,7 +28,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 ### Step 4: Create the Trip Table
 - **01-2-4-new-table-menu** - Solution "+ New" menu with "Table" → "Table (advanced properties)" option highlighted (not just "Tables")
 - **01-2-4-table-creation-dialog** - New table dialog for Trip table
-- **01-2-4-primary-column-config** - Primary column configuration showing rename from "Name" to "Trip Name"
+- **01-2-4-primary-column-config** - Primary column configuration showing rename from "Name" to `Trip Name`
 - **01-2-4-table-designer-empty** - Empty table designer after creating Trip table with system Status column visible
 - **01-2-4-add-column-dialog** - "New column" dialog showing data type selection options
 
@@ -40,10 +40,10 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 ### Step 5: Create the Expense Table
 - **01-2-5-expense-creation** - Creating second table from solution using "+ New" → "Table" → "Table (advanced properties)"
-- **01-2-5-primary-column-config** - Primary column configuration showing rename from "Name" to "Expense Title"
+- **01-2-5-primary-column-config** - Primary column configuration showing rename from "Name" to `Expense Title`
 - **01-2-5-expense-table-designer** - Expense table in designer with multiple columns showing data types and formats
 
-- **01-2-5-lookup-field-config** - Trip Reference lookup field configuration showing related table selection
+- **01-2-5-lookup-field-config** - `Trip Reference` lookup field configuration showing related table selection
 - **01-2-5-solution-with-tables** - Solution overview showing both tables created after saving
 
 ---
@@ -71,7 +71,7 @@ This document lists all screenshots needed for Exercise 1: Building Your First M
 
 ### Step 9: Customize the Expense Main View  
 - **01-3-9-expense-view-designer** - Expense view designer
-- **01-3-9-expense-view-columns** - Expense view with configured columns including Trip Reference lookup
+- **01-3-9-expense-view-columns** - Expense view with configured columns including `Trip Reference` lookup
 - **01-3-9-completed-expense-view** - Final Expense view
 
 ---

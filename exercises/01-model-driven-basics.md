@@ -84,19 +84,19 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Table Creation Dialog](images/01-2-4-table-creation-dialog.png)
 
-4. Select **Save**
+4. The table designer will open automatically:
 
 ![Table Designer Empty](images/01-2-4-table-designer-empty.png)
 
 5. **Configure the Primary Column**: Before adding custom columns, let's make the primary column more descriptive:
-   - In the table designer, locate the **Name** column (this is the primary column)
-   - Select the **Name** column to edit its properties
+   - In the table designer, locate the **`Name`** column (this is the primary column)
+   - Select the **`Name`** column to edit its properties
    - Change the **Display name** from "Name" to `Trip Name`
    - This makes it clearer what this field represents
 
 ![Primary Column Config](images/01-2-4-primary-column-config.png)
 
-6. **Understanding System vs Business Status**: Every Dataverse table automatically includes a **Status** column for system-level record state (Active/Inactive). This is different from business status tracking, so we create our own **Trip Status** column for business logic (Planning, In Progress, etc.). This is why we name it "Trip Status" - to differentiate from the system Status.
+6. **Understanding System vs Business Status**: Every Dataverse table automatically includes a **`Status`** column for system-level record state (Active/Inactive). This is different from business status tracking, so we create our own **`Trip Status`** column for business logic (Planning, In Progress, etc.). This is why we name it `Trip Status` - to differentiate from the system Status.
 
 7. Add the following columns by selecting **+ New column**:
 
@@ -105,42 +105,42 @@ From now on, **all components will be created within this solution**. This ensur
 > [!TIP]
 > **Descriptions Power Tooltips**: The **Description** field for each column becomes the tooltip text in the model-driven app. This is crucial for usability and accessibility - users will see these descriptions when they hover over field labels or need guidance. Write clear, helpful descriptions that explain what users should enter.
 
-| Column Name      | Data Type           | Format    | Business Required | Description                                                 |
-| ---------------- | ------------------- | --------- | ----------------- | ----------------------------------------------------------- |
-| Destination      | Single Line of Text | Text      | Yes               | City, country, or location where the trip is taking place   |
-| Start Date       | Date and time       | Date only | Yes               | The date when the business trip begins                      |
-| End Date         | Date and time       | Date only | Yes               | The date when the business trip ends                        |
-| Trip Purpose     | Choice              | N/A       | No                | The business reason for this trip (meeting, training, etc.) |
-| Estimated Budget | Currency            | Currency  | No                | Expected total cost for this trip including all expenses    |
-| Trip Status      | Choice              | N/A       | Yes               | Current stage of trip planning and execution                |
+| Column Name        | Data Type           | Format    | Business Required | Description                                                 |
+| ------------------ | ------------------- | --------- | ----------------- | ----------------------------------------------------------- |
+| `Destination`      | Single Line of Text | Text      | Yes               | City, country, or location where the trip is taking place   |
+| `Start Date`       | Date and time       | Date only | Yes               | The date when the business trip begins                      |
+| `End Date`         | Date and time       | Date only | Yes               | The date when the business trip ends                        |
+| `Trip Purpose`     | Choice              | N/A       | No                | The business reason for this trip (meeting, training, etc.) |
+| `Estimated Budget` | Currency            | Currency  | No                | Expected total cost for this trip including all expenses    |
+| `Trip Status`      | Choice              | N/A       | Yes               | Current stage of trip planning and execution                |
 
 8. **Create Global Choice Sets**: Instead of creating local choices, we'll create global choice sets that can be reused across tables. This ensures consistency and easier maintenance.
 
    **For Trip Purpose:**
-   - When configuring the Trip Purpose column, select **Sync with global choice**
+   - When configuring the `Trip Purpose` column, select **Sync with global choice**
    - Select **+ New choice** to create a new global choice set
    - Name: `Trip Purpose Values` (note the "Values" suffix - this is a naming convention)
    - Add these choices:
-     - Business Meeting
-     - Training
-     - Conference
-     - Customer Visit
-     - Other
+     - `Business Meeting`
+     - `Training`
+     - `Conference`
+     - `Customer Visit`
+     - `Other`
 
 ![Trip Purpose Value](images/01-2-4-trip-purpose-values.png)
 
    **For Trip Status:**
-   - When configuring the Trip Status column, select **Sync with global choice**
+   - When configuring the `Trip Status` column, select **Sync with global choice**
    - Select **+ New choice** to create a new global choice set
    - Name: `Trip Status Values`
    - Add these choices:
-     - Planning (Default)
-     - In Progress
-     - Completed
-     - Cancelled
+     - `Planning` (Default)
+     - `In Progress`
+     - `Completed`
+     - `Cancelled`
 
 > [!TIP]
-> **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a "Project Status" that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
+> **Why Global Choice Sets?** Global choice sets can be reused across multiple tables and even environments. If you later need to add a `Project Status` that uses the same values, you can reuse `Trip Status Values`. They also ensure consistent spellings and reduce maintenance.
 
 > [!IMPORTANT]
 > **Data Types and Formats Best Practices**: Configure these carefully for optimal user experience:
@@ -164,62 +164,60 @@ Your table should now look like this:
    - **Display name**: `Expense`
    - **Plural display name**: `Expenses` (auto-populated) 
    - **Name**: `[prefix]_Expense` (e.g., `lf_Expense` - note your prefix)
-3. Select **Save**
+
+3. The table designer will open automatically
 
 4. **Configure the Primary Column**: Similar to the Trip table, let's make the primary column more descriptive:
-   - In the table designer, locate the **Name** column (this is the primary column)
-   - Select the **Name** column to edit its properties  
+   - In the table designer, locate the **`Name`** column (this is the primary column)
+   - Select the **`Name`** column to edit its properties  
    - Change the **Display name** from "Name" to `Expense Title`
    - This makes it clear this field describes the expense
 
 5. Add the following columns by selecting **+ New column**:
 
-![Expense Table Designer](images/01-2-5-expense-table-designer.png)
-
 > [!TIP]
 > **Remember**: Descriptions become tooltips for users - make them helpful and clear!
 
-| Column Name            | Data Type     | Format                 | Business Required | Description                                                |
-| ---------------------- | ------------- | ---------------------- | ----------------- | ---------------------------------------------------------- |
-| Expense Date           | Date and time | Date only              | Yes               | The date when this expense was incurred during the trip    |
-| Amount                 | Currency      | Currency               | Yes               | Total cost of this expense (in your local currency)        |
-| Expense Category       | Choice        | N/A                    | Yes               | Type of business expense                                   |
-| Payment Method         | Choice        | N/A                    | Yes               | How this expense was paid                                  |
-| Receipt Attached       | Yes/No        | Yes/No                 | No                | Indicates if you have a receipt or proof of purchase       |
-| Business Justification | Text          | Multiple lines of text | No                | Explanation of why this expense was necessary for business |
-| Trip Reference         | Lookup        | N/A                    | Yes               | Select which trip this expense belongs to                  |
+| Column Name              | Data Type     | Format                 | Business Required | Description                                                |
+| ------------------------ | ------------- | ---------------------- | ----------------- | ---------------------------------------------------------- |
+| `Expense Date`           | Date and time | Date only              | Yes               | The date when this expense was incurred during the trip    |
+| `Amount`                 | Currency      | Currency               | Yes               | Total cost of this expense (in your local currency)        |
+| `Expense Category`       | Choice        | N/A                    | Yes               | Type of business expense                                   |
+| `Payment Method`         | Choice        | N/A                    | Yes               | How this expense was paid                                  |
+| `Receipt Attached`       | Yes/No        | Yes/No                 | No                | Indicates if you have a receipt or proof of purchase       |
+| `Business Justification` | Text          | Multiple lines of text | No                | Explanation of why this expense was necessary for business |
+| `Trip Reference`         | Lookup        | N/A                    | Yes               | Select which trip this expense belongs to                  |
 
 6. **Create Global Choice Sets** for reusable options:
 
    **For Expense Category:**
-   - When configuring the Expense Category column, select **Sync with global choice**
+   - When configuring the `Expense Category` column, select **Sync with global choice**
    - Select **+ New choice** to create a new global choice set
    - Name: `Expense Category Values`
    - Add these choices:
-     - Meals & Entertainment
-     - Transportation
-     - Accommodation
-     - Fuel
-     - Parking
-     - Other
+     - `Meals & Entertainment`
+     - `Transportation`
+     - `Accommodation`
+     - `Fuel`
+     - `Parking`
+     - `Other`
 
    **For Payment Method:**
-   - When configuring the Payment Method column, select **Sync with global choice**
+   - When configuring the `Payment Method` column, select **Sync with global choice**
    - Select **+ New choice** to create a new global choice set
    - Name: `Payment Method Values`
    - Add these choices:
-     - Company Credit Card
-     - Personal Reimbursement
-     - Cash Advance
+     - `Company Credit Card`
+     - `Personal Reimbursement`
+     - `Cash Advance`
 
 > [!TIP]
 > **Global Choice Reuse**: Notice how we're building a library of reusable choice sets. In future exercises, we might reuse these same choice sets or create new ones following the "Values" naming convention.
 
-7. **Don't save yet** - we need to add the lookup relationship first
 
-8. **Configure the lookup relationship** - we need to add the Trip Reference field:
-   - Find the **Trip Reference** column in your table designer
-   - Select the **Trip Reference** column to configure it
+7. **Configure the lookup relationship** - we need to add the `Trip Reference` field:
+   - Find the **`Trip Reference`** column in your table designer
+   - Select the **`Trip Reference`** column to configure it
    - Set the following properties:
      - **Data type**: Lookup
      - **Related table**: Trip
@@ -230,7 +228,7 @@ Your table should now look like this:
 > [!IMPORTANT]
 > **Automatic Relationship Creation**: When you create a lookup column in Dataverse, it automatically creates the 1:N relationship for you! You don't need separate steps to "create the relationship" - the lookup column IS the relationship. This creates a one-to-many relationship where one Trip can have many Expenses.
 
-9. Select **Save and exit** to finish the Expense table
+8. Your table is now complete and ready for customization
 
 ![Solution With Tables](images/01-3-6-solution-with-tables.png)
 
@@ -244,11 +242,11 @@ Your table should now look like this:
 2. Select **Forms** tab
 3. Find the **Information** form (Main form type) and select to edit it
 4. Customize the form layout:
-   - **Header section**: Add Trip Name and Trip Status
+   - **Header section**: Add `Trip Name` and `Trip Status`
    - **General section**: Organize fields in two columns:
-     - Left column: Destination, Start Date, Trip Purpose  
-     - Right column: Estimated Budget, End Date
-   - Add a new **Details** section below with: Business Justification (if you added this field)
+     - Left column: `Destination`, `Start Date`, `Trip Purpose`  
+     - Right column: `Estimated Budget`, `End Date`
+   - Add a new **Details** section below with: `Business Justification` (if you added this field)
 
 5. **Add a Related Records subgrid**:
    - From the **Table columns** panel, drag **Related** → **Expenses** onto the form
@@ -262,14 +260,14 @@ Your table should now look like this:
 1. Still in the Trip table, select **Views** tab
 2. Find the **Active Trips** view and select to edit it
 3. Configure the view columns (in this order):
-   - Trip Name
-   - Destination  
-   - Start Date
-   - End Date
-   - Trip Status
-   - Estimated Budget
+   - `Trip Name`
+   - `Destination`  
+   - `Start Date`
+   - `End Date`
+   - `Trip Status`
+   - `Estimated Budget`
 
-4. Set **Sort by**: Start Date (Descending) so newest trips appear first
+4. Set **Sort by**: `Start Date` (Descending) so newest trips appear first
 5. Select **Save and publish**
 
 ### Step 8: Customize the Expense Main Form
@@ -277,11 +275,11 @@ Your table should now look like this:
 1. Navigate to your **Expense** table
 2. Select **Forms** tab → edit the **Information** form
 3. Organize the form:
-   - **Header**: Expense Title and Amount
+   - **Header**: `Expense Title` and `Amount`
    - **General section**:
-     - Left column: Trip Reference, Expense Date, Expense Category
-     - Right column: Payment Method, Receipt Attached
-   - **Details section**: Business Justification
+     - Left column: `Trip Reference`, `Expense Date`, `Expense Category`
+     - Right column: `Payment Method`, `Receipt Attached`
+   - **Details section**: `Business Justification`
 
 4. Select **Save and publish**
 
@@ -290,14 +288,14 @@ Your table should now look like this:
 1. In Expense table, select **Views** tab
 2. Edit the **Active Expenses** view
 3. Configure columns:
-   - Expense Title
-   - Trip Reference (this will show the related trip name)
-   - Expense Date
-   - Amount
-   - Expense Category
-   - Payment Method
+   - `Expense Title`
+   - `Trip Reference` (this will show the related trip name)
+   - `Expense Date`
+   - `Amount`
+   - `Expense Category`
+   - `Payment Method`
 
-4. Set **Sort by**: Expense Date (Descending)
+4. Set **Sort by**: `Expense Date` (Descending)
 5. Select **Save and publish**
 
 ---
@@ -359,7 +357,7 @@ Your table should now look like this:
 3. **Test the Relationship**:
    - Open a trip record
    - In the **Expenses** subgrid, select **+ New Expense**
-   - Notice the Trip Reference field is automatically populated
+   - Notice the `Trip Reference` field is automatically populated
    - Fill out the expense details and save
    - See how it appears in both the subgrid and the Expenses main area
 
@@ -406,9 +404,9 @@ While most standard operations are built-in, you might add custom buttons for:
 
 If you finish early, try these enhancements:
 
-1. **Add a Status Reason**: Create a status reason field on Expense Report with values like "Draft", "Submitted", "Approved", "Rejected"
+1. **Add a Status Reason**: Create a status reason field on Expense with values like `Draft`, `Submitted`, `Approved`, `Rejected`
 
-2. **Create a Business Rule**: Make the "Business Justification" field required when the expense amount is over $100
+2. **Create a Business Rule**: Make the `Business Justification` field required when the expense amount is over $100
 
 3. **Add a Calculated Field**: Create a calculated field on Trip that shows the total of all related expense reports
 
@@ -436,7 +434,7 @@ If you finish early, try these enhancements:
 - Make sure tables are saved and published
 
 **Lookup field not showing Trip names?**
-- Verify the Trip table has a "Name" or primary field configured
+- Verify the Trip table has a "`Name`" or primary field configured
 - Check that the relationship was created correctly
 
 **App won't load?**
