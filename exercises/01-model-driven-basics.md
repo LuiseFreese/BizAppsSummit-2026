@@ -25,12 +25,12 @@ We're building an expense tracking system where:
 
 1. Navigate to **Power Apps** ([make.powerapps.com](https://make.powerapps.com))
 2. Select your environment
-3. Click **Solutions** in the left navigation
+3. Select **Solutions** in the left navigation
 
 ![Solutions Page](images/01-1-1-solutions-page.png)
 
-4. Click **+ New solution**
-5. Before we create the solution, we need a publisher. Click **+ New publisher**
+4. Select **+ New solution**
+5. Before we create the solution, we need a publisher. Select **+ New publisher**
 6. Fill in the publisher details using **your initials**:
    - **Display name**: `[Your Initials]` (e.g., "LF")
    - **Name**: `[yourinitials]` (e.g., "lf" - this will auto-populate)
@@ -40,9 +40,9 @@ We're building an expense tracking system where:
 
 ![Publisher Form Filled](images/01-1-1-publisher-form-filled.png)
 
-7. Click **Save**
+7. Select **Create**
 
-> 💡 **Why use your initials?** This ensures each participant has a unique publisher prefix, avoiding conflicts when working in shared environments.
+
 
 ### Step 2: Create the Solution
 
@@ -53,7 +53,7 @@ We're building an expense tracking system where:
    - **Version**: `1.0.0.0` (default)
    - **Description**: `Complete expense tracking solution for business trips`
 
-2. Click **Create**
+2. Select **Create**
 
 ![Solution Created](images/01-1-2-solution-created.png)
 
@@ -73,7 +73,7 @@ From now on, **all components will be created within this solution**. This ensur
 ### Step 4: Create the Trip Table
 
 1. You should now be **inside your Expense Tracker App solution**
-2. Click **+ New** → **Table** → **Table**
+2. Select **+ New** → **Table** → **Table**
 
 ![New Table Menu](images/01-2-4-new-table-menu.png)
 
@@ -84,11 +84,11 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Table Creation Dialog](images/01-2-4-table-creation-dialog.png)
 
-4. Click **Save**
+4. Select **Save**
 
 ![Table Designer Empty](images/01-2-4-table-designer-empty.png)
 
-5. You're now in the table designer. Add the following columns by clicking **+ New column**:
+5. You're now in the table designer. Add the following columns by selecting **+ New column**:
 
 ![Add Column Dialog](images/01-2-4-add-column-dialog.png)
 
@@ -117,13 +117,13 @@ From now on, **all components will be created within this solution**. This ensur
    - Completed
    - Cancelled
 
-9. Click **Save** (this saves the table to your solution)
+9. Select **Save** (this saves the table to your solution)
 
 ![Trip Table Complete](images/01-2-4-trip-table-complete.png)
 
 ### Step 5: Create the Expense Report Table
 
-1. From your solution, click **+ New** → **Table** → **Table**
+1. From your solution, select **+ New** → **Table** → **Table**
 
 ![Expense Report Creation](images/01-2-5-expense-report-creation.png)
 
@@ -131,8 +131,8 @@ From now on, **all components will be created within this solution**. This ensur
    - **Display name**: `Expense Report`
    - **Plural display name**: `Expense Reports` (auto-populated) 
    - **Name**: `[prefix]_ExpenseReport` (e.g., `lf_ExpenseReport` - note your prefix)
-3. Click **Save**
-4. Add the following columns by clicking **+ New column**:
+3. Select **Save**
+4. Add the following columns by selecting **+ New column**:
 
 ![Expense Table Designer](images/01-2-5-expense-table-designer.png)
 
@@ -171,7 +171,7 @@ From now on, **all components will be created within this solution**. This ensur
 ### Step 6: Add the Trip Lookup to Expense Report
 
 1. While still in the Expense Report table editor, find the **Trip** column
-2. Click on the **Trip** column to configure it
+2. Select the **Trip** column to configure it
 3. Set the following properties:
    - **Data type**: Lookup
    - **Related table**: Trip
@@ -179,11 +179,11 @@ From now on, **all components will be created within this solution**. This ensur
 
 ![Lookup Configuration](images/01-3-6-lookup-configuration.png)
 
-4. Click **Save** to save the relationship
+4. Select **Save** to save the relationship
 
 ![Relationship Created](images/01-3-6-relationship-created.png)
 
-5. Click **Save and exit** to finish the Expense Report table
+5. Select **Save and exit** to finish the Expense Report table
 
 ![Solution With Tables](images/01-3-6-solution-with-tables.png)
 
@@ -200,8 +200,8 @@ You've just created a **1:N (one-to-many)** relationship where:
 ### Step 7: Customize the Trip Main Form
 
 1. Go back to **Tables** and select your **Trip** table
-2. Click **Forms** tab
-3. Find the **Information** form (Main form type) and click to edit it
+2. Select **Forms** tab
+3. Find the **Information** form (Main form type) and select to edit it
 4. Customize the form layout:
    - **Header section**: Add Trip Name and Trip Status
    - **General section**: Organize fields in two columns:
@@ -214,12 +214,12 @@ You've just created a **1:N (one-to-many)** relationship where:
    - This will show all expense reports related to this trip
    - Position it at the bottom of the form
 
-6. Click **Save and publish**
+6. Select **Save and publish**
 
 ### Step 8: Customize the Trip Main View
 
-1. Still in the Trip table, click **Views** tab
-2. Find the **Active Trips** view and click to edit it
+1. Still in the Trip table, select **Views** tab
+2. Find the **Active Trips** view and select to edit it
 3. Configure the view columns (in this order):
    - Trip Name
    - Destination  
@@ -229,12 +229,12 @@ You've just created a **1:N (one-to-many)** relationship where:
    - Estimated Budget
 
 4. Set **Sort by**: Start Date (Descending) so newest trips appear first
-5. Click **Save and publish**
+5. Select **Save and publish**
 
 ### Step 9: Customize the Expense Report Main Form
 
 1. Navigate to your **Expense Report** table
-2. Click **Forms** tab → edit the **Information** form
+2. Select **Forms** tab → edit the **Information** form
 3. Organize the form:
    - **Header**: Expense Title and Amount
    - **General section**:
@@ -242,11 +242,11 @@ You've just created a **1:N (one-to-many)** relationship where:
      - Right column: Payment Method, Receipt Attached
    - **Details section**: Business Justification
 
-4. Click **Save and publish**
+4. Select **Save and publish**
 
 ### Step 10: Customize the Expense Report Main View  
 
-1. In Expense Report table, click **Views** tab
+1. In Expense Report table, select **Views** tab
 2. Edit the **Active Expense Reports** view
 3. Configure columns:
    - Expense Title
@@ -257,7 +257,7 @@ You've just created a **1:N (one-to-many)** relationship where:
    - Payment Method
 
 4. Set **Sort by**: Expense Date (Descending)
-5. Click **Save and publish**
+5. Select **Save and publish**
 
 ---
 
@@ -265,58 +265,58 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ### Step 11: Build the App
 
-1. From within your **Expense Tracker App solution**, click **+ New** → **App** → **Model-driven app**
+1. From within your **Expense Tracker App solution**, select **+ New** → **App** → **Model-driven app**
 2. In the app designer:
    - **Name**: `Expense Tracker`
    - **Description**: `Track business trip expenses and manage approvals`
-3. Click **Create**
+3. Select **Create**
 
 4. In the modern app designer:
-   - Click **+ Add page** → **Table based view and form**
+   - Select **+ Add page** → **Table based view and form**
    - Select **Trip** table (it will show with your prefix, e.g., `lf_Trip`)
    - This automatically adds both the view and form pages for trips
-   - Click **Add**
+   - Select **Add**
 
 5. Repeat for Expense Reports:
-   - Click **+ Add page** → **Table based view and form** 
+   - Select **+ Add page** → **Table based view and form** 
    - Select **Expense Report** table (it will show with your prefix, e.g., `lf_ExpenseReport`)
-   - Click **Add**
+   - Select **Add**
 
 6. **Organize Navigation**:
    - In the navigation area, arrange items:
      - Trips (first)
      - Expense Reports (second)
 
-7. Click **Save** then **Publish**
+7. Select **Save** then **Publish**
 
 > 💡 **Solution Benefits**: Notice how all your components (tables, app) are now organized within your solution. This makes deployment to other environments much easier!
 
 ### Step 12: Test Your App
 
-1. Click **Play** to launch your app
+1. Select **Play** to launch your app
 2. **Test the built-in CRUD operations**:
 
    **Create**: 
-   - Click **Trips** in navigation
-   - Click **+ New** in command bar
+   - Select **Trips** in navigation
+   - Select **+ New** in command bar
    - Fill out a sample trip and save
    
    **Read**: 
    - View the trip in the list
-   - Click on a trip to open the detailed form
+   - Select a trip to open the detailed form
    - Notice the Related Expense Reports section
    
    **Update**: 
    - Edit any field in the trip
-   - Click **Save** 
+   - Select **Save** 
    
    **Delete**: 
    - Select a trip from the list
-   - Click **Delete** in command bar (be careful!)
+   - Select **Delete** in command bar (be careful!)
 
 3. **Test the Relationship**:
    - Open a trip record
-   - In the **Expense Reports** subgrid, click **+ New Expense Report**
+   - In the **Expense Reports** subgrid, select **+ New Expense Report**
    - Notice the Trip field is automatically populated
    - Fill out the expense details and save
    - See how it appears in both the subgrid and the Expense Reports main area
@@ -331,7 +331,7 @@ You've just created a **1:N (one-to-many)** relationship where:
 
 ✅ **Data Validation**: Required fields, data type validation automatically enforced
 
-✅ **Relationship Navigation**: Click from trips to expenses and back seamlessly  
+✓️ **Relationship Navigation**: Select from trips to expenses and back seamlessly  
 
 ✅ **Search and Filtering**: Use the search box and filter options in views
 
