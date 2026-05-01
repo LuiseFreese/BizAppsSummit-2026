@@ -77,8 +77,8 @@ Here's what the finished page looks like:
 
 This workshop focuses on the integration between model-driven apps and custom pages, so rather than building every control by hand, we've provided a ready-made screen that uses **modern controls** with **responsive auto-layout containers** — a pattern you can reuse in your own projects.
 
-1. Download the [uploadscreen.txt](../downloads/uploadscreen.txt) file from the downloads folder
-2. Copy the **complete contents** of the file
+1. Open [uploadscreen.txt](../downloads/uploadscreen.txt) file in github
+2. Copy the **complete contents** of the file (you can use the button in the top right)
 3. In the custom page editor, paste the code into your page
 
 ![Paste Screen](images/4-5-paste.png)
@@ -153,18 +153,6 @@ The pasted screen contains a complete expense entry form built with modern contr
 
 The upload flow works, but every invoice returns the same mock data. In [Exercise 5](05-add-ai.md), you'll replace the hardcoded response with a **Custom Prompt** powered by AI that actually reads the uploaded invoice and extracts real values.
 
----
-
-## 🥳 Exercise Complete!
-
-**You've successfully:**
-- Connected Dataverse tables to your custom page
-- Retrieved the current Trip record using `Param()` and `LookUp()`
-- Added a complete invoice upload form with modern controls
-- Created Expense records with `Patch()` linked to the correct Trip
-- Navigated back to the model-driven app after saving
-
-**Previous Exercise**: [Exercise 3: Open a Custom Page from the Command Bar](03-open-page-webressource.md)
 
 ---
 
