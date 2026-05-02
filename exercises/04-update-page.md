@@ -80,6 +80,7 @@ This workshop focuses on the integration between model-driven apps and custom pa
 1. Open [uploadscreen.txt](../downloads/uploadscreen.txt) file in github
 2. Copy the **complete contents** of the file (you can use the button in the top right)
 3. In the custom page editor, paste the code into your page
+4. If you named your tables & fields differently you might see some errors you have to resolve
 
 ![Paste Screen](images/4-5-paste.png)
 

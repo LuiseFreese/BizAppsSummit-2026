@@ -225,8 +225,8 @@ Screens:
                     =Patch(Expenses, Defaults(Expenses), 
                         {
                             'Expense Title': txt_Title.Text,
-                            'Expense Date   ':dtp_date.SelectedDate,
-                            'Expense Category ':cmb_type.Selected.Value,
+                            'Expense Date':dtp_date.SelectedDate,
+                            'Expense Category':cmb_type.Selected.Value,
                             Amount: num_Amount.Value,
                             Currency: cmb_currency.Selected, 
                             'Trip Reference': gblTrip
