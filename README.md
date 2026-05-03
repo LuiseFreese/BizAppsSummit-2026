@@ -66,7 +66,7 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ## Resources
 
 ### Sample Apps
-- **Reference Model-Driven App**: Download from [/downloads/reference-model-app.zip](./downloads/reference-model-app.zip)
+- **Reference Solution**: Download from [/downloads/ExpenseTracker_1_0_0_1.zip](./downloads/ExpenseTracker_1_0_0_1.zip)
 - **Custom Page Templates**: Available in [/templates](./templates) folder
 - **Sample Data**: Seed data available in [/data](./data) folder
 
