@@ -1,0 +1,238 @@
+Screens:
+  scr_main:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Children:
+      - con_daddy:
+          Control: GroupContainer@1.5.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            PaddingBottom: =8
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =8
+            Width: =Parent.Width
+          Children:
+            - con_form:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingBottom: =8
+                  PaddingLeft: =8
+                  PaddingRight: =8
+                  PaddingTop: =8
+                Children:
+                  - lbl_upload:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Upload Invoice"
+                  - att_Invoice:
+                      Control: Attachments@2.3.0
+                      Properties:
+                        BorderColor: =Color.Purple
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        Fill: =ColorValue("#F5F5F5")
+                        Height: =120
+                        MaxAttachments: =1
+                        OnAddFile: |-
+                          =Set(gblSpinner, true);
+
+                          // This is the AI Builder Version
+                          //Set(gblInvoice, 'Extract Invoice Info'.Predict(First(Self.Attachments).Value));
+
+                          // This is the hardcoded response
+
+                          Set(
+                              gblInvoice,
+                              {
+                                  FinishReason: "stop",
+                                  StructuredOutput: {
+                                      Amount: 677.26,
+                                      Category: "Accomodation",
+                                      Currency: "EUR",
+                                      Date: "2026-05-03",
+                                      Title: "RECHNUNG",
+                                      Vendor: "Hotel Excelsior"
+                                  },
+                                  Text: "This is just Mock Data"
+                              }
+                          );
+
+
+
+                          Set(gblSpinner, false);
+                        Size: =12
+                        Width: =320
+                        X: =1046
+                        Y: =336
+                  - spin_load:
+                      Control: Spinner@1.4.6
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Start
+                        Height: =50
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Visible: =gblSpinner
+                        Width: =50
+                  - sep_1:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+                  - lbl_title:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Expense Title"
+                  - txt_Title:
+                      Control: ModernTextInput@1.0.0
+                      Properties:
+                        Default: =gblInvoice.StructuredOutput.Vendor
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                  - sep_2:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+                  - lbl_date:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Expense Date"
+                  - dtp_date:
+                      Control: ModernDatePicker@1.0.0
+                      Properties:
+                        DefaultDate: |
+                          =With({datesplit: Split(Coalesce(gblInvoice.StructuredOutput.Date, Text(Today(), "yyyy-mm-dd")), "-")},
+                          Date(Value(Index(datesplit, 1).Value),Value(Index(datesplit, 2).Value),Value(Index(datesplit, 3).Value))
+                          )
+                        Format: =DatePickerFormat.Short
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        StartOfWeek: =StartOfWeek.Monday
+                  - sep_3:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+                  - lbl_amount:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Amount"
+                  - num_Amount:
+                      Control: ModernNumberInput@1.1.0
+                      Properties:
+                        Default: =gblInvoice.StructuredOutput.Amount
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                  - sep_4:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+                  - lbl_currency:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Currency"
+                  - cmb_currency:
+                      Control: ModernCombobox@1.1.0
+                      Properties:
+                        DefaultSelectedItems: =LookUp(Currencies,'Currency Code'=gblInvoice.StructuredOutput.Currency)
+                        ItemDisplayText: =ThisItem.'Currency Name'
+                        Items: =Currencies
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        SelectMultiple: =false
+                  - sep_5:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+                  - lbl_type:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Type"
+                  - cmb_type:
+                      Control: ModernCombobox@1.1.0
+                      Properties:
+                        DefaultSelectedItems: |-
+                          =[Switch(
+                                      gblInvoice.StructuredOutput.Category,
+                                      "Transport", 'Expense Type Values'.Transport,
+                                      "Accomodation", 'Expense Type Values'.Accomodation,
+                                      "Meals", 'Expense Type Values'.'Meals & Entertainment',
+                                      'Expense Type Values'.Other)]
+                        ItemDisplayText: =ThisItem.Value
+                        Items: =Choices('Expense Type Values')
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        SelectMultiple: =false
+                  - sep_6:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        FillPortions: =1
+                        Height: =10
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: =
+            - sep_7:
+                Control: ModernText@1.0.0
+                Properties:
+                  Height: =10
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Text: =
+            - btn_submit:
+                Control: Button@0.0.45
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  Icon: ="Save"
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  OnSelect: |-
+                    =Patch(Expenses, Defaults(Expenses), 
+                        {
+                            'Expense Title': txt_Title.Text,
+                            'Expense Date':dtp_date.SelectedDate,
+                            'Expense Category':cmb_type.Selected.Value,
+                            Amount: num_Amount.Value,
+                            Currency: cmb_currency.Selected, 
+                            'Trip Reference': gblTrip
+                            //File: {FileName: First(att_Invoice.Attachments).Name, Value: First(att_Invoice.Attachments).Value}
+                        });
+
+                    Navigate(gblTrip)
+                  Text: ="Save Expense"
+                  Width: =150
