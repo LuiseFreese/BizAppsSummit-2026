@@ -172,7 +172,7 @@ Title;PageLogicalName;EntityName;Target;Width;Height
 ### Key Concepts
 
 - **Web Resources**: JavaScript files stored in Dataverse that extend model-driven app functionality
-- **`Xrm.Navigation.navigateTo`**: The API that opens custom pages, web resources, or entity forms as dialogs
+- **`Xrm.Navigation.navigateTo`**: The API that opens custom pages, web resources, or entity forms as dialogs — [see examples](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/navigate-to-custom-page-examples)
 - **Command Bar Customization**: Adding buttons that trigger JavaScript functions with contextual parameters
 - **FirstPrimaryItemId**: A built-in token that automatically provides the current record's ID
 
