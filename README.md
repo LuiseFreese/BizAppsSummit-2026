@@ -51,17 +51,18 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ## Learning Exercises
 
 ### Part 1: Foundation Building & Data Platform Decisions
+- **Exercise 0**: [Setup](./exercises/00-setup.md)
 - **Lecture**: [SharePoint Lists vs Dataverse - When to Use What](./lectures/01-sharepoint-vs-dataverse.md)
 - **Lecture**: [Understanding Dataverse Tables](./lectures/02-understanding-dataverse-tables.md)
 - **Exercise 1**: [Building Your First Model-Driven App](./exercises/01-model-driven-basics.md)
 
 ### Part 2: Custom Pages Development  
-- **Exercise 2**: [Creating Your First Custom Page](./exercises/02-custom-page-basics.md)
-- **Exercise 3**: [Advanced Custom Page with JavaScript](./exercises/03-custom-page-advanced.md)
+- **Exercise 2**: [Creating Your First Custom Page](./exercises/02-create-first-page.md)
+- **Exercise 3**: [Open a Custom Page from the Command Bar](./exercises/03-open-page-webressource.md)
+- **Exercise 4**: [Building the Invoice Upload Page](./exercises/04-update-page.md)
 
 ### Part 3: AI Integration & Best Practices
-- **Exercise 4**: [AI Builder Integration](./exercises/04-ai-builder.md)
-- **Exercise 5**: [Generative Pages Preview](./exercises/05-generative-pages.md)
+- **Exercise 5**: [Adding AI with a Custom Prompt](./exercises/05-ai-builder.md)
 
 ## Resources
 
