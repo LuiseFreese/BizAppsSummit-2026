@@ -68,7 +68,7 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ### Sample Apps
 - **Reference Solution**: Download from [/downloads/ExpenseTracker_1_0_0_1.zip](./downloads/ExpenseTracker_1_0_0_1.zip)
 - **Custom Page Templates**: Available in [/templates](./templates) folder
-- **Sample Data**: Seed data available in [/data](./data) folder
+
 
 ### Documentation
 
@@ -84,19 +84,7 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 4. **Use the reference apps** when you get stuck or want to see the final result
 5. **Join the discussion** in our Q&A session for any questions
 
-## Folder Structure
 
-```
-📁 BizAppsSummit-2026/
-├── 📁 exercises/           # Step-by-step tutorial exercises
-├── 📁 lectures/            # Presentation materials and discussion guides
-├── 📁 downloads/           # Reference apps and solutions  
-├── 📁 templates/           # Reusable custom page templates
-├── 📁 data/               # Sample data for exercises
-├── 📁 documentation/      # Best practices and guides
-├── 📁 assets/             # Images and media files
-└── 📄 README.md          # This file
-```
 
 ## Contributing
 
