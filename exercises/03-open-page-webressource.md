@@ -185,7 +185,7 @@ The `openPage.js` web resource is designed to be reused across your entire solut
 
 ### What's Next?
 
-You've now connected your custom page to the model-driven app. The page currently just displays the record ID as a debug label. In [Exercise 4](04-build-custom-page.md), you'll upgrade this page to a full expense creation form with file upload capabilities.
+You've now connected your custom page to the model-driven app. The page currently just displays the record ID as a debug label. In [Exercise 4](04-update-page.md), you'll upgrade this page to a full expense creation form with file upload capabilities.
 
 
 
