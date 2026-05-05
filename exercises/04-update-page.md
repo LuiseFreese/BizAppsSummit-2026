@@ -104,7 +104,7 @@ The pasted screen contains a complete expense entry form built with modern contr
 | **Save button** (`btn_submit`) | Calls `Patch()` to create a new Expense record linked to `gblTrip`, then calls `Navigate(gblTrip)` to return to the Trip form |
 
 > [!IMPORTANT]
-> **Mock Data Alert**: The `OnAddFile` handler currently returns **hardcoded mock data** instead of calling an AI service. This means every upload will show the same values (Hotel Excelsior, €677.26, etc.) regardless of what file you upload. In [Exercise 5](05-add-ai.md), we'll replace this with a real **Custom Prompt** that uses AI to extract actual invoice data.
+> **Mock Data Alert**: The `OnAddFile` handler currently returns **hardcoded mock data** instead of calling an AI service. This means every upload will show the same values (Hotel Excelsior, €677.26, etc.) regardless of what file you upload. In [Exercise 5](05-ai-builder.md), we'll replace this with a real **Custom Prompt** that uses AI to extract actual invoice data.
 
 > [!TIP]
 > **The `Navigate(gblTrip)` Pattern**: Calling `Navigate()` with a Dataverse record in a custom page tells the model-driven app to navigate to that record's form. This is a powerful pattern — after saving the expense, the user is taken straight back to the Trip form where they can see their new expense in the subgrid. See the [Power Fx in model-driven apps documentation](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/page-powerfx-in-model-app) for more navigation options.
@@ -152,7 +152,7 @@ The pasted screen contains a complete expense entry form built with modern contr
 
 ### What's Next?
 
-The upload flow works, but every invoice returns the same mock data. In [Exercise 5](05-add-ai.md), you'll replace the hardcoded response with a **Custom Prompt** powered by AI that actually reads the uploaded invoice and extracts real values.
+The upload flow works, but every invoice returns the same mock data. In [Exercise 5](05-ai-builder.md), you'll replace the hardcoded response with a **Custom Prompt** powered by AI that actually reads the uploaded invoice and extracts real values.
 
 
 ---

@@ -52,8 +52,6 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 
 ### Part 1: Foundation Building & Data Platform Decisions
 - **Exercise 0**: [Setup](./exercises/00-setup.md)
-- **Lecture**: [SharePoint Lists vs Dataverse - When to Use What](./lectures/01-sharepoint-vs-dataverse.md)
-- **Lecture**: [Understanding Dataverse Tables](./lectures/02-understanding-dataverse-tables.md)
 - **Exercise 1**: [Building Your First Model-Driven App](./exercises/01-model-driven-basics.md)
 
 ### Part 2: Custom Pages Development  
@@ -67,8 +65,7 @@ You should have built at least a few Canvas Apps and be familiar with the main b
 ## Resources
 
 ### Sample Apps
-- **Reference Solution**: Download from [/downloads/ExpenseTracker_1_0_0_1.zip](./downloads/ExpenseTracker_1_0_0_1.zip)
-- **Custom Page Templates**: Available in [/templates](./templates) folder
+- **Reference Solution**: Download from [/downloads/ExpenseTracker_Final.zip](./downloads/ExpenseTracker_Final.zip)
 
 
 ### Documentation
